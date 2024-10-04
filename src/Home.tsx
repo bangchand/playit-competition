@@ -2,12 +2,29 @@ import React from "react";
 import MainVideo from "../src/assets/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
+import Profile from "../src/Section/Profile";
 import { motion } from "framer-motion";
-import { potensiDesa } from "../src/dataPotensi";
-// import { GridBackground } from "./components/GridBackground";
-import { HoverEffect } from "../src/components/CardHover";
+import {
+  FaTractor,
+  FaTree,
+  FaHandHoldingHeart,
+  FaPaw,
+  FaSeedling,
+  FaSolarPanel,
+} from "react-icons/fa";
 
-
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.8 }, 
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1, 
+    transition: {
+      delay: i * 0.3,
+      duration: 0.5,
+    },
+  }),
+};
 
 const VideoContainer = styled.section`
   width: 100%;
@@ -92,6 +109,8 @@ const Home: React.FC = () => {
           <HoverEffect items={potensiDesa} />
         </div>
       </section>
+
+      <Profile />
     </>
   );
 };
