@@ -6,7 +6,7 @@ const Profile: React.FC = () => {
       {/* Background Pattern for Better Glassmorphism Effect */}
       <div className="absolute inset-0  opacity-30 pointer-events-none"></div>
 
-      <div className="absolute left-[10%] top-10 z-50 backdrop-blur-md bg-white/20 p-8 text-white rounded-xl shadow-lg max-w-md md:max-w-lg md:mr-8 mb-8 md:mb-0 border border-white/30">
+      <div className="absolute left-[10%] top-10 z-50 backdrop-blur-md bg-[#141414] p-8 text-white/80 rounded-xl shadow-lg max-w-md md:max-w-lg md:mr-8 mb-8 md:mb-0 border border-white/30">
         <p className="text-lg mb-4">
           Desa Genggelang, yang terletak di Kecamatan Gangga, Kabupaten Lombok
           Utara, adalah destinasi wisata menawan dengan panorama alam yang
