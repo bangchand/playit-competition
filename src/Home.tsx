@@ -2,6 +2,7 @@ import React from "react";
 import MainVideo from "../src/assets/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
+import Profile from "../src/Section/Profile";
 import { motion } from "framer-motion";
 import {
   FaTractor,
@@ -11,13 +12,14 @@ import {
   FaSeedling,
   FaSolarPanel,
 } from "react-icons/fa";
+import { ImMoveUp } from "react-icons/im";
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.8 }, 
+  hidden: { opacity: 0, y: 50, scale: 0.8 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    scale: 1, 
+    scale: 1,
     transition: {
       delay: i * 0.3,
       duration: 0.5,
@@ -29,7 +31,7 @@ const VideoContainer = styled.section`
   width: 100%;
   height: 100vh;
   position: relative;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   video {
     width: 100%;
     height: 100%;
@@ -71,7 +73,7 @@ const Home: React.FC = () => {
               ease: "easeOut",
             }}
           >
-           Selamat Datang di Desa Genggelang
+            Selamat Datang di Desa Genggelang
           </motion.h1>
           <motion.p
             className="ml-2 mt-4 italic text-2xl text-white"
@@ -84,7 +86,7 @@ const Home: React.FC = () => {
               ease: "easeOut",
             }}
           >
-           Kabupaten Lombok Utara, Nusa Tenggara Barat
+            Kabupaten Lombok Utara, Nusa Tenggara Barat
           </motion.p>
         </div>
         <video src={MainVideo} loop muted autoPlay />
@@ -98,7 +100,9 @@ const Home: React.FC = () => {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
-              icon: <FaTractor className="text-gray-600 text-6xl mx-auto mb-4" />,
+              icon: (
+                <FaTractor className="text-gray-600 text-6xl mx-auto mb-4" />
+              ),
               title: "Pertanian dan Perkebunan",
               desc: "Potensi utama Desa Genggelang dalam bidang pertanian, dengan hasil bumi seperti padi, jagung, dan sayuran.",
             },
@@ -113,17 +117,23 @@ const Home: React.FC = () => {
               desc: "Peternakan sapi, kambing, dan unggas menjadi sektor ekonomi yang potensial di desa ini.",
             },
             {
-              icon: <FaHandHoldingHeart className="text-gray-600 text-6xl mx-auto mb-4" />,
+              icon: (
+                <FaHandHoldingHeart className="text-gray-600 text-6xl mx-auto mb-4" />
+              ),
               title: "Kerajinan Lokal",
               desc: "Kerajinan tangan, seperti kain tenun dan anyaman bambu, menjadi kekayaan budaya yang dapat dikembangkan.",
             },
             {
-              icon: <FaSeedling className="text-gray-600 text-6xl mx-auto mb-4" />,
+              icon: (
+                <FaSeedling className="text-gray-600 text-6xl mx-auto mb-4" />
+              ),
               title: "Agrowisata",
               desc: "Agrowisata di Desa Genggelang memberikan pengalaman wisata edukatif bagi para pengunjung.",
             },
             {
-              icon: <FaSolarPanel className="text-gray-600 text-6xl mx-auto mb-4" />,
+              icon: (
+                <FaSolarPanel className="text-gray-600 text-6xl mx-auto mb-4" />
+              ),
               title: "Energi Terbarukan",
               desc: "Potensi pengembangan energi terbarukan seperti mikrohidro dan tenaga surya di Desa Genggelang.",
             },
@@ -145,6 +155,8 @@ const Home: React.FC = () => {
           ))}
         </div>
       </section>
+
+      <Profile />
     </>
   );
 };
