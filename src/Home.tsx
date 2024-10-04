@@ -110,7 +110,11 @@ const Home: React.FC = () => {
             menciptakan kemampuan wilayah yang memadai.
           </p>
         </div>
+<<<<<<< HEAD
         {/* HoverEffect component for Potensi Desa */}
+=======
+
+>>>>>>> 6c46799ba82db40bdd522babeeaaed4427435b2f
         <div className="mt-12">
           <HoverEffect items={potensiDesa} />
         </div>
