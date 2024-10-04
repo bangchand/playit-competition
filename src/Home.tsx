@@ -87,7 +87,7 @@ const Home: React.FC = () => {
             menciptakan kemampuan wilayah yang memadai.
           </p>
         </div>
-        {/* HoverEffect component for Potensi Desa */}
+
         <div className="mt-12">
           <HoverEffect items={potensiDesa} />
         </div>
