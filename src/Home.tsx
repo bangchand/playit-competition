@@ -1,5 +1,5 @@
 import React from "react";
-import MainVideo from "../src/assets/hero_video.mp4";
+import MainVideo from "/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import Profile from "../src/Section/Profile";
