@@ -96,54 +96,17 @@ const Home: React.FC = () => {
         <h2 className="text-4xl font-bold text-white text-center mb-10">
           Potensi Desa
         </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              icon: <FaTractor className="text-gray-600 text-6xl mx-auto mb-4" />,
-              title: "Pertanian dan Perkebunan",
-              desc: "Potensi utama Desa Genggelang dalam bidang pertanian, dengan hasil bumi seperti padi, jagung, dan sayuran.",
-            },
-            {
-              icon: <FaTree className="text-gray-600 text-6xl mx-auto mb-4" />,
-              title: "Pariwisata Alam",
-              desc: "Desa Genggelang memiliki potensi wisata alam yang indah, seperti air terjun dan perbukitan yang cocok untuk trekking.",
-            },
-            {
-              icon: <FaPaw className="text-gray-600 text-6xl mx-auto mb-4" />,
-              title: "Peternakan",
-              desc: "Peternakan sapi, kambing, dan unggas menjadi sektor ekonomi yang potensial di desa ini.",
-            },
-            {
-              icon: <FaHandHoldingHeart className="text-gray-600 text-6xl mx-auto mb-4" />,
-              title: "Kerajinan Lokal",
-              desc: "Kerajinan tangan, seperti kain tenun dan anyaman bambu, menjadi kekayaan budaya yang dapat dikembangkan.",
-            },
-            {
-              icon: <FaSeedling className="text-gray-600 text-6xl mx-auto mb-4" />,
-              title: "Agrowisata",
-              desc: "Agrowisata di Desa Genggelang memberikan pengalaman wisata edukatif bagi para pengunjung.",
-            },
-            {
-              icon: <FaSolarPanel className="text-gray-600 text-6xl mx-auto mb-4" />,
-              title: "Energi Terbarukan",
-              desc: "Potensi pengembangan energi terbarukan seperti mikrohidro dan tenaga surya di Desa Genggelang.",
-            },
-          ].map((potensi, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-md p-6 rounded-lg text-center"
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              animate="visible"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {potensi.icon}
-              <h3 className="text-2xl font-bold">{potensi.title}</h3>
-              <p className="mt-2 text-gray-600">{potensi.desc}</p>
-            </motion.div>
-          ))}
+        <div className="text-white text-center max-w-4xl mx-auto mb-12">
+          <p className="text-lg">
+            Potensi daerah adalah kemampuan suatu daerah yang berupa sumber daya
+            yang bisa digunakan, dieksploitasi, dan diambil manfaatnya untuk
+            dikembangkan secara lebih lanjut sehingga bisa meningkatkan dan
+            menciptakan kemampuan wilayah yang memadai.
+          </p>
+        </div>
+
+        <div className="mt-12">
+          <HoverEffect items={potensiDesa} />
         </div>
       </section>
 
