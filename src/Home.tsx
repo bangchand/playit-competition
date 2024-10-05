@@ -2,12 +2,15 @@ import React from "react";
 import MainVideo from "/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
+import Genggelang from "/logogenggelang.png";
+import Ntb from "/logontb.svg";
 import Profile from "../src/Section/Profile";
 import { motion } from "framer-motion";
 import { potensiDesa } from "../src/dataPotensi";
 // import { GridBackground } from "./components/GridBackground";
 import { HoverEffect } from "../src/components/CardHover";
 import UMKMGallery from "./Section/Umkm";
+import Geografis from "./Section/Geografis";
 
 
 
@@ -41,10 +44,45 @@ const GradientDivider = styled.div`
   z-index: 10;
 `;
 
+const LogoContainer = styled.div`
+  position: absolute;
+  z-index: 20;
+  top: 10px;
+  width: 100px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+`;
+
+const LeftLogo = styled(LogoContainer)`
+  left: 10px;
+  max-width: 80px;
+  `;
+  
+  const RightLogo = styled(LogoContainer)`
+  top: 20px;
+  right: 30px;
+  max-width: 50px;
+`;
+
 const Home: React.FC = () => {
   return (
     <>
       <Navbar />
+      <LeftLogo>
+        <a href="https://www.google.com/search?q=Desa+Genggelang&rlz=1C5GCEM_enID1114ID1114&oq=Desa+Genggelang&gs_lcrp=EgZjaHJvbWUqDAgAEEUYOxjjAhiABDIMCAAQRRg7GOMCGIAEMgYIARBFGDsyBwgCEC4YgAQyBggDEEUYOzIGCAQQRRhAMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTcxOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
+          <img src={Genggelang} alt="Logo Genggelang" />
+        </a>
+      </LeftLogo>
+      <RightLogo>
+        <a href="https://www.google.com/search?q=Nusa+Tenggara+Barat&rlz=1C5GCEM_enID1114ID1114&oq=Nusa+&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyCggCEC4YsQMYgAQyCggDEC4YsQMYgAQyBggEEEUYOTIKCAUQLhixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABNIBCDEyNjBqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
+          <img src={Ntb} alt="Logo NTB" />
+        </a>
+      </RightLogo>
       <VideoContainer>
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center p-4">
           <motion.h1
@@ -94,8 +132,10 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+
       <Profile />
       <UMKMGallery /> 
+      <Geografis /> 
     </>
   );
 };

@@ -47,19 +47,19 @@ const products = [
     name: "Coffee Bamboo",
     price: "Rp10.000-15.000",
     description:
-      "Terbuat dari pisang raja kualitas terbaik hasil panen Desa Sambirejo.",
+      "Kami meyediakan buah tangan brupa berbagai macam pruduk ada tas bambu ada juga gelas yang di buat dari bambu bok bambu untuk pengemasan kopi bubuk yang siap saji",
     imageUrl: bamboo,
   },
   {
     name: "Cokelat Senara",
     price: "Rp10.000-20.000",
-    description: "Roti panggang berbentuk oval yang membawa Anda bernostalgia.",
+    description: "Saat merasa stres dan depresi akan segala rutinitas yang padat dan membosankan, memakan sebatang coklat mungkin akan membuat perasaan #Sobatwisata lebih baik.",
     imageUrl: cokelat,
   },
   {
     name: "Tas dari EcoPrint",
     price: "Rp5.000",
-    description: "Tas terbuat dari ecoprint unik yang cocok untuk oleh-oleh.",
+    description: " Ecoprint adalah sebuah usaha seni dan kerajinan yang berfokus pada teknik ecoprint atau eco-printing.",
     imageUrl: ecoprint,
   },
 ];
@@ -78,7 +78,7 @@ const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-500 text-left text-sm max-w-sm mt-2 dark:text-neutral-300"
+          className="text-neutral-500 transition-all duration-300 group-hover/card:text-neutral-300 text-left text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
           {product.description}
         </CardItem>
@@ -87,7 +87,7 @@ const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
             src={product.imageUrl}
             height="1000"
             width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-60 w-full object-cover rounded-xl  group-hover/card:shadow-xl"
             alt={product.name}
           />
         </CardItem>
