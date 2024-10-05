@@ -32,15 +32,15 @@ const VideoContainer = styled.section`
   }
 `;
 
-const GradientDivider = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 12), transparent);
-  z-index: 10;
-`;
+// const GradientDivider = styled.div`
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 120px;
+//   background: linear-gradient(to top, rgba(0, 0, 0, 12), transparent);
+//   z-index: 10;
+// `;
 
 const LogoContainer = styled.div`
   position: absolute;
