@@ -2,6 +2,8 @@ import React from "react";
 import MainVideo from "/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
+import Genggelang from "/logogenggelang.png";
+import Ntb from "/logontb.png";
 import Profile from "../src/Section/Profile";
 import { motion } from "framer-motion";
 import { potensiDesa } from "../src/dataPotensi";
@@ -72,12 +74,12 @@ const Home: React.FC = () => {
       <Navbar />
       <LeftLogo>
         <a href="https://www.google.com/search?q=Desa+Genggelang&rlz=1C5GCEM_enID1114ID1114&oq=Desa+Genggelang&gs_lcrp=EgZjaHJvbWUqDAgAEEUYOxjjAhiABDIMCAAQRRg7GOMCGIAEMgYIARBFGDsyBwgCEC4YgAQyBggDEEUYOzIGCAQQRRhAMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTcxOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
-          <img src="/public/logogenggelang.png" alt="Logo Genggelang" />
+          <img src={Genggelang} alt="Logo Genggelang" />
         </a>
       </LeftLogo>
       <RightLogo>
         <a href="https://www.google.com/search?q=Nusa+Tenggara+Barat&rlz=1C5GCEM_enID1114ID1114&oq=Nusa+&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyCggCEC4YsQMYgAQyCggDEC4YsQMYgAQyBggEEEUYOTIKCAUQLhixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABNIBCDEyNjBqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
-          <img src="/public/logontb.svg" alt="Logo NTB" />
+          <img src={Ntb} alt="Logo NTB" />
         </a>
       </RightLogo>
       <VideoContainer>
