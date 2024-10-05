@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { potensiDesa } from "../src/dataPotensi";
 // import { GridBackground } from "./components/GridBackground";
 import { HoverEffect } from "../src/components/CardHover";
+import UMKMGallery from "./Section/Umkm";
 
 
 
@@ -94,6 +95,7 @@ const Home: React.FC = () => {
       </section>
 
       <Profile />
+      <UMKMGallery />
     </>
   );
 };
