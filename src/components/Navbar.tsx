@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   position: absolute;
-  top: 5%;
+  top: 3%;
   left: 50%;
   font-family: "Poppins", sans-serif;
   transform: translateX(-50%);
