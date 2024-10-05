@@ -111,7 +111,7 @@ const Home: React.FC = () => {
             Kabupaten Lombok Utara, Nusa Tenggara Barat
           </motion.p>
         </div>
-        <img src={MainVideo} loop muted autoPlay />
+        <video src={MainVideo} loop muted autoPlay />
       </VideoContainer>
       <GradientDivider />
 
