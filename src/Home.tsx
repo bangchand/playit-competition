@@ -17,6 +17,7 @@ import Geografis from "./Section/Geografis";
 const VideoContainer = styled.section`
   width: 100%;
   height: 100vh;
+  background: black;
   position: relative;
   font-family: "Poppins", sans-serif;
   video {
