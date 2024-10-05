@@ -95,7 +95,7 @@ const Home: React.FC = () => {
       </section>
 
       <Profile />
-      <UMKMGallery />
+      <UMKMGallery /> 
     </>
   );
 };
