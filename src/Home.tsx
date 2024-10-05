@@ -10,6 +10,7 @@ import { potensiDesa } from "../src/dataPotensi";
 // import { GridBackground } from "./components/GridBackground";
 import { HoverEffect } from "../src/components/CardHover";
 import UMKMGallery from "./Section/Umkm";
+import Geografis from "./Section/Geografis";
 
 
 
@@ -131,8 +132,10 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+
       <Profile />
       <UMKMGallery /> 
+      <Geografis /> 
     </>
   );
 };

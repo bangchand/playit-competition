@@ -36,8 +36,7 @@ const Nav = styled.nav`
     transition: background 0.2s ease;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
+      // background: rgba(255, 255, 255, 0.1);
     }
   }
   
