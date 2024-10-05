@@ -45,21 +45,21 @@ interface Product {
 const products = [
   {
     name: "Coffee Bamboo",
-    price: "Rp10.000-15.000",
+    price: "Rp10.000-15.000 (perkiraan Harga)",
     description:
       "Kami meyediakan buah tangan brupa berbagai macam pruduk ada tas bambu ada juga gelas yang di buat dari bambu bok bambu untuk pengemasan kopi bubuk yang siap saji",
     imageUrl: bamboo,
   },
   {
     name: "Cokelat Senara",
-    price: "Rp10.000-20.000",
+    price: "Rp10.000-20.000 (perkiraan Harga)",
     description: "Saat merasa stres dan depresi akan segala rutinitas yang padat dan membosankan, memakan sebatang coklat mungkin akan membuat perasaan #Sobatwisata lebih baik.",
     imageUrl: cokelat,
   },
   {
     name: "Tas dari EcoPrint",
-    price: "Rp5.000",
-    description: " Ecoprint adalah sebuah usaha seni dan kerajinan yang berfokus pada teknik ecoprint atau eco-printing.",
+    price: "Rp15.000-30.000 (perkiraan Harga)",
+    description: "Desa Genggelang ini juga punya karya seni Ecoprint. Ecoprint adalah sebuah usaha seni dan kerajinan yang berfokus pada teknik ecoprint atau eco-printing. #Sobatwisata pasti tertarik",
     imageUrl: ecoprint,
   },
 ];
@@ -101,13 +101,12 @@ const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
           >
             {product.price}
           </CardItem>
-          <CardItem
+          {/* <CardItem
             translateZ={20}
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
-            Try now →
-          </CardItem>
+          </CardItem> */}
         </div>
       </CardBody>
     </CardContainer>

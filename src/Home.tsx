@@ -11,6 +11,7 @@ import { potensiDesa } from "../src/dataPotensi";
 import { HoverEffect } from "../src/components/CardHover";
 import UMKMGallery from "./Section/Umkm";
 import Geografis from "./Section/Geografis";
+import Wisata from "./Section/Wisata";
 
 
 
@@ -137,6 +138,7 @@ const Home: React.FC = () => {
       <Profile />
       <UMKMGallery /> 
       <Geografis /> 
+      <Wisata /> 
     </>
   );
 };

@@ -6,8 +6,6 @@ const Geografis: React.FC = () => {
     <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen p-8 relative">
       <div className="absolute inset-0  opacity-30 pointer-events-none"></div>
 
-    
-
       <h1 className="absolute top-24 right-[10%] text-white text-[2.5rem] font-bold mb-4">
         Letak Geografis
       </h1>
