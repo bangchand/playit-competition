@@ -3,7 +3,7 @@ import MainVideo from "/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import Genggelang from "/logogenggelang.png";
-import Ntb from "/logontb.png";
+import Ntb from "/logontb.svg";
 import Profile from "../src/Section/Profile";
 import { motion } from "framer-motion";
 import { potensiDesa } from "../src/dataPotensi";
