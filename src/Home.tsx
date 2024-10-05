@@ -12,6 +12,8 @@ import { HoverEffect } from "../src/components/CardHover";
 import UMKMGallery from "./Section/Umkm";
 import Geografis from "./Section/Geografis";
 
+
+
 const VideoContainer = styled.section`
   width: 100%;
   height: 100vh;
@@ -32,15 +34,15 @@ const VideoContainer = styled.section`
   }
 `;
 
-// const GradientDivider = styled.div`
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 120px;
-//   background: linear-gradient(to top, rgba(0, 0, 0, 12), transparent);
-//   z-index: 10;
-// `;
+const GradientDivider = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 12), transparent);
+  z-index: 10;
+`;
 
 const LogoContainer = styled.div`
   position: absolute;
@@ -59,9 +61,9 @@ const LogoContainer = styled.div`
 const LeftLogo = styled(LogoContainer)`
   left: 10px;
   max-width: 80px;
-`;
-
-const RightLogo = styled(LogoContainer)`
+  `;
+  
+  const RightLogo = styled(LogoContainer)`
   top: 20px;
   right: 30px;
   max-width: 50px;
@@ -69,23 +71,15 @@ const RightLogo = styled(LogoContainer)`
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-black">
+    <>
       <Navbar />
       <LeftLogo>
-        <a
-          href="https://www.google.com/search?q=Desa+Genggelang&rlz=1C5GCEM_enID1114ID1114&oq=Desa+Genggelang&gs_lcrp=EgZjaHJvbWUqDAgAEEUYOxjjAhiABDIMCAAQRRg7GOMCGIAEMgYIARBFGDsyBwgCEC4YgAQyBggDEEUYOzIGCAQQRRhAMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTcxOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.google.com/search?q=Desa+Genggelang&rlz=1C5GCEM_enID1114ID1114&oq=Desa+Genggelang&gs_lcrp=EgZjaHJvbWUqDAgAEEUYOxjjAhiABDIMCAAQRRg7GOMCGIAEMgYIARBFGDsyBwgCEC4YgAQyBggDEEUYOzIGCAQQRRhAMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTcxOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
           <img src={Genggelang} alt="Logo Genggelang" />
         </a>
       </LeftLogo>
       <RightLogo>
-        <a
-          href="https://www.google.com/search?q=Nusa+Tenggara+Barat&rlz=1C5GCEM_enID1114ID1114&oq=Nusa+&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyCggCEC4YsQMYgAQyCggDEC4YsQMYgAQyBggEEEUYOTIKCAUQLhixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABNIBCDEyNjBqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://www.google.com/search?q=Nusa+Tenggara+Barat&rlz=1C5GCEM_enID1114ID1114&oq=Nusa+&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyCggCEC4YsQMYgAQyCggDEC4YsQMYgAQyBggEEEUYOTIKCAUQLhixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABNIBCDEyNjBqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
           <img src={Ntb} alt="Logo NTB" />
         </a>
       </RightLogo>
@@ -117,9 +111,9 @@ const Home: React.FC = () => {
             Kabupaten Lombok Utara, Nusa Tenggara Barat
           </motion.p>
         </div>
-        <video src={MainVideo} loop muted autoPlay className="fade-down" />
+        <video src={MainVideo} loop muted autoPlay />
       </VideoContainer>
-      {/* <GradientDivider /> */}
+      <GradientDivider />
 
       <section id="potensi-desa" className="w-full p-20 bg-black">
         <h2 className="text-4xl font-bold text-white text-center mb-10">
@@ -138,10 +132,11 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+
       <Profile />
-      <UMKMGallery />
-      <Geografis />
-    </div>
+      <UMKMGallery /> 
+      <Geografis /> 
+    </>
   );
 };
 
