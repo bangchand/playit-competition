@@ -31,6 +31,13 @@ const ProductGrid = styled.div`
   justify-content: center;
 `;
 
+interface Product {
+  name: string;
+  price: string;
+  description: string;
+  imageUrl: string;
+}
+
 
 const products = [
   {
@@ -54,15 +61,15 @@ const products = [
   },
 ];
 
-const ThreeDCardDemo = ({ product }) => {
+interface ThreeDCardDemoProps {
+  product: Product;
+}
+
+const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
   return (
-    // hover:border-green-600/50
     <CardContainer className="inter-var rounded-lg border-4 border-transparent transition-all duration-300 hover:border-gray-300">
       <CardBody className="bg-[#141414] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-white"
-        >
+        <CardItem translateZ="50" className="text-xl font-bold text-white">
           {product.name}
         </CardItem>
         <CardItem
@@ -103,6 +110,7 @@ const ThreeDCardDemo = ({ product }) => {
     </CardContainer>
   );
 };
+
 
 const UMKMGallery: React.FC = () => {
   return (
