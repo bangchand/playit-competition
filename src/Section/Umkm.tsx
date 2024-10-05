@@ -3,6 +3,9 @@
 import React from "react";
 import styled from "styled-components";
 import { CardBody, CardContainer, CardItem } from "../components/Card3D";
+import cokelat from '../assets/cokelat.png'
+import bamboo from '../assets/coffeebamboo.png'
+import ecoprint from '../assets/ecoprint.png'
 import { Link } from "react-router-dom";
 
 const GallerySection = styled.section`
@@ -45,19 +48,19 @@ const products = [
     price: "Rp10.000-15.000",
     description:
       "Terbuat dari pisang raja kualitas terbaik hasil panen Desa Sambirejo.",
-    imageUrl: "./src/assets/coffeebamboo.png",
+    imageUrl: bamboo,
   },
   {
     name: "Cokelat Senara",
     price: "Rp10.000-20.000",
     description: "Roti panggang berbentuk oval yang membawa Anda bernostalgia.",
-    imageUrl: "./src/assets/cokelat.png",
+    imageUrl: cokelat,
   },
   {
     name: "Tas dari EcoPrint",
     price: "Rp5.000",
     description: "Tas terbuat dari ecoprint unik yang cocok untuk oleh-oleh.",
-    imageUrl: "./src/assets/ecoprint.png",
+    imageUrl: ecoprint,
   },
 ];
 
