@@ -1,5 +1,6 @@
 import React from "react";
-import MainVideo from "/hero_video.mp4";
+// import MainVideo from "/hero_video.mp4";
+import ukir from "/ukir.png"
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
 import Genggelang from "/logogenggelang.png";
@@ -111,7 +112,7 @@ const Home: React.FC = () => {
             Kabupaten Lombok Utara, Nusa Tenggara Barat
           </motion.p>
         </div>
-        <video src={MainVideo} loop muted autoPlay />
+        <img src={ukir} />
       </VideoContainer>
       <GradientDivider />
 
