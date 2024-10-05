@@ -4,17 +4,17 @@ import letakGeografis from "../assets/geografis.png"
 const Geografis: React.FC = () => {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen p-8 relative">
-      {/* Background Pattern for Better Glassmorphism Effect */}
       <div className="absolute inset-0  opacity-30 pointer-events-none"></div>
 
     
 
-      <h1 className="absolute top-16 right-[10%] text-white text-[2.5rem] font-semibold mb-4">
+      <h1 className="absolute top-24 right-[10%] text-white text-[2.5rem] font-bold mb-4">
         Letak Geografis
       </h1>
+        <p className="absolute top-20 right-[10%] text-green-600 mb-4 text-lg"> Peta Desa Genggelang</p>
 
-      <h1 className="absolute bottom-[16%] left-[10%] text-white text-xl font-semibold mb-4">
-        Peta Desa Genggelang
+      <h1 className="absolute bottom-[18%] left-[10%] text-white/70 transition-all duration-300 hover:text-white italic text-sm mb-4">
+      Kabupaten Lombok Utara, Nusa Tenggara Barat
       </h1>
 
       <div className="absolute left-[10%] w-full md:w-1/2 max-w-4xl">
