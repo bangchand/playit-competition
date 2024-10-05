@@ -41,10 +41,45 @@ const GradientDivider = styled.div`
   z-index: 10;
 `;
 
+const LogoContainer = styled.div`
+  position: absolute;
+  z-index: 20;
+  top: 10px;
+  width: 100px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+`;
+
+const LeftLogo = styled(LogoContainer)`
+  left: 10px;
+  max-width: 80px;
+  `;
+  
+  const RightLogo = styled(LogoContainer)`
+  top: 20px;
+  right: 30px;
+  max-width: 50px;
+`;
+
 const Home: React.FC = () => {
   return (
     <>
       <Navbar />
+      <LeftLogo>
+        <a href="https://www.google.com/search?q=Desa+Genggelang&rlz=1C5GCEM_enID1114ID1114&oq=Desa+Genggelang&gs_lcrp=EgZjaHJvbWUqDAgAEEUYOxjjAhiABDIMCAAQRRg7GOMCGIAEMgYIARBFGDsyBwgCEC4YgAQyBggDEEUYOzIGCAQQRRhAMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTcxOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
+          <img src="/public/logogenggelang.png" alt="Logo Genggelang" />
+        </a>
+      </LeftLogo>
+      <RightLogo>
+        <a href="https://www.google.com/search?q=Nusa+Tenggara+Barat&rlz=1C5GCEM_enID1114ID1114&oq=Nusa+&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDsyCggCEC4YsQMYgAQyCggDEC4YsQMYgAQyBggEEEUYOTIKCAUQLhixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDINCAgQABiDARixAxiABNIBCDEyNjBqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">
+          <img src="/public/logontb.svg" alt="Logo NTB" />
+        </a>
+      </RightLogo>
       <VideoContainer>
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center p-4">
           <motion.h1

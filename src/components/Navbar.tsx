@@ -1,52 +1,68 @@
 import React from "react";
 import styled from "styled-components";
 
+
 const Nav = styled.nav`
   position: absolute;
-  top: 5%; /* Ruang di atas */
+  top: 5%;
   left: 50%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   transform: translateX(-50%);
   background: rgba(0, 10, 0, 0.5);
-  padding: 8px 20px; 
-  border-radius: 12px; 
-  backdrop-filter: blur(5px); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 10px 30px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; /* Pusatkan konten */
-  z-index: 10; 
+  z-index: 10;
+  overflow: visible;
 
   ul {
     list-style: none;
     display: flex;
-    gap: 10px; /* Jarak antar item */
+    align-items: center;
+    gap: 10px;
+    padding: 0;
   }
 
   a {
     text-decoration: none;
     color: white;
-    font-size: 14px; /* Ukuran font lebih kecil untuk mobile */
-    font-weight: 600; /* Bobot font */
-    padding: 8px; /* Padding untuk area klik yang lebih kecil */
-    transition: background 0.2s ease; /* Transisi untuk efek hover */
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    transition: background 0.2s ease;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.1); /* Efek hover yang lebih baik */
-      border-radius: 4px; /* Rounding pada hover */
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
     }
   }
+  
 
-  @media (max-width: 768px) { /* Media query untuk ukuran layar lebih kecil */
-    top: 3%; /* Sesuaikan ruang di atas */
-    padding: 4px 15px; /* Padding lebih kecil di mobile */
-    font-size: 14px; /* Ukuran font lebih kecil di mobile */
+  /* Atur posisi dan jarak logo Genggelang */
+  #genggelang {
+    position: absolute;
+    top: 50%;
+    left: -600px; /* Jarak antara logo dan navbar */
+    transform: translateY(-50%);
+    max-width: 100px;
+    height: auto;
   }
+
+  /* Atur posisi dan jarak logo NTB */
+
+  @media (max-width: 768px) {
+    top: 3%;
+    padding: 8px 15px;
+    font-size: 14px;
 `;
 
 const Navbar: React.FC = () => {
   return (
-    <Nav className="">
+    <Nav>
       <ul>
         <li>
           <a href="#">Beranda</a>
@@ -64,6 +80,7 @@ const Navbar: React.FC = () => {
           <a href="#contact">Contact</a>
         </li>
       </ul>
+    
     </Nav>
   );
 };
