@@ -28,7 +28,7 @@ const Geografis: React.FC = () => {
       </h1>
 
       {/* Deskripsi desa */}
-      <div className="bg-[#141414] backdrop-blur-md p-6 text-white/80 rounded-xl shadow-lg border border-white/30 w-full md:w-auto md:max-w-md md:mb-0 md:absolute md:left-[63%] md:top-[27%]">
+      <div className="bg-[#141414] backdrop-blur-md p-6 text-white/80 rounded-xl shadow-lg md:border border-white/30 w-full md:w-auto md:max-w-md md:mb-0 md:absolute md:left-[63%] md:top-[27%]">
         <p className="text-sm md:text-base mb-4">
           Desa Genggelang, yang terletak di Kecamatan Gangga, Kabupaten Lombok
           Utara, adalah destinasi wisata menawan dengan panorama alam yang
