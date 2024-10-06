@@ -85,7 +85,7 @@ const Home: React.FC = () => {
         </a>
       </RightLogo>
       <VideoContainer id="section-two">
-        <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center p-4">
+        <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center px-4">
           <motion.h1
             className="text-5xl font-bold text-white font-poppins"
             style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
