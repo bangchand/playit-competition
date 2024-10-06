@@ -18,12 +18,17 @@ export const HoverEffect = ({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10", className)}>
+    <div
+      className={cn(
+        "grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 py-6 px-5 md:px-0", 
+        className
+      )}
+    >
       {items.map((item, idx) => (
         <Link
           to={item?.link}
           key={item?.link}
-          className="relative text-2xl group block p-2 h-full w-full"
+          className="relative text-xl sm:text-2xl group block p-2 h-full w-full" 
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -46,11 +51,11 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription className="text-lg"> 
+            <CardDescription className="text-sm sm:text-lg"> 
               {item.description}
             </CardDescription>
             <item.icon
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-8xl text-green-400 opacity-20 group-hover:opacity-50 transition-opacity duration-300"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-6xl sm:text-8xl text-green-400 opacity-20 group-hover:opacity-50 transition-opacity duration-300"
             />
           </Card>
         </Link>
@@ -88,7 +93,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 md:text-lg font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -104,7 +109,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm", // Ubah ukuran teks di sini
+        "mt-4 text-zinc-400 text-xs tracking-wide leading-relaxed md:text-sm  group-hover:text-white", // Sesuaikan ukuran teks untuk tampilan mobile
         className
       )}
     >

@@ -6,12 +6,10 @@ import Genggelang from "/logogenggelang.png";
 import Ntb from "/logontb.svg";
 import Profile from "../src/Section/Profile";
 import { motion } from "framer-motion";
-import { potensiDesa } from "../src/dataPotensi";
-// import { GridBackground } from "./components/GridBackground";
-import { HoverEffect } from "../src/components/CardHover";
 import UMKMGallery from "./Section/Umkm";
 import Geografis from "./Section/Geografis";
 import Wisata from "./Section/Wisata";
+import Potensi from "./Section/Potensi";
 
 
 
@@ -116,29 +114,12 @@ const Home: React.FC = () => {
         <video src={MainVideo} loop muted autoPlay />
       </VideoContainer>
       <GradientDivider />
-
-      <section id="potensi-desa" className="w-full p-20 bg-black">
-        <h2 className="text-4xl font-bold text-white text-center mb-10">
-          Potensi Desa
-        </h2>
-        <div className="text-white text-center max-w-4xl mx-auto mb-12">
-          <p className="text-lg">
-            Potensi daerah adalah kemampuan suatu daerah yang berupa sumber daya
-            yang bisa digunakan, dieksploitasi, dan diambil manfaatnya untuk
-            dikembangkan secara lebih lanjut sehingga bisa meningkatkan dan
-            menciptakan kemampuan wilayah yang memadai.
-          </p>
-        </div>
-        <div className="mt-12">
-          <HoverEffect items={potensiDesa} />
-        </div>
-      </section>
-
-
+      <Potensi />
       <Profile />
       <UMKMGallery /> 
       <Geografis /> 
       <Wisata /> 
+      
     </>
   );
 };

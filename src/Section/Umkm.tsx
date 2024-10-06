@@ -1,37 +1,46 @@
+
 "use client";
 
 import React from "react";
 import styled from "styled-components";
 import { CardBody, CardContainer, CardItem } from "../components/Card3D";
-import cokelat from '../assets/cokelat.png'
-import bamboo from '../assets/coffeebamboo.png'
-import ecoprint from '../assets/ecoprint.png'
+import cokelat from "../assets/cokelat.png";
+import bamboo from "../assets/coffeebamboo.png";
+import ecoprint from "../assets/ecoprint.png";
 import { Link } from "react-router-dom";
 
 const GallerySection = styled.section`
-  padding: 5rem 2rem;
+  padding: 0 2rem;
+  margin: 2rem 1rem;
   background-color: #000000;
   font-family: "Poppins", sans-serif;
   text-align: center;
+
+  @media (min-width: 640px) {
+    padding: 5rem 3rem;
+    margin: 2.5rem;
+  }
 `;
 
 const GalleryHeader = styled.h2`
-  font-size: 2.5rem;
   font-weight: bold;
   color: white;
   margin-bottom: 2rem;
 `;
 
 const GalleryDescription = styled.p`
-  font-size: 1.2rem;
   margin-bottom: 3rem;
 `;
 
 const ProductGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem; /* Mengurangi gap antara card */
   justify-content: center;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 interface Product {
@@ -40,7 +49,6 @@ interface Product {
   description: string;
   imageUrl: string;
 }
-
 
 const products = [
   {
@@ -53,13 +61,15 @@ const products = [
   {
     name: "Cokelat Senara",
     price: "Rp10.000-20.000 (perkiraan Harga)",
-    description: "Saat merasa stres dan depresi akan segala rutinitas yang padat dan membosankan, memakan sebatang coklat mungkin akan membuat perasaan #Sobatwisata lebih baik.",
+    description:
+      "Saat merasa stres dan depresi akan segala rutinitas yang padat dan membosankan, memakan sebatang coklat mungkin akan membuat perasaan #Sobatwisata lebih baik.",
     imageUrl: cokelat,
   },
   {
     name: "Tas dari EcoPrint",
     price: "Rp15.000-30.000 (perkiraan Harga)",
-    description: "Desa Genggelang ini juga punya karya seni Ecoprint. Ecoprint adalah sebuah usaha seni dan kerajinan yang berfokus pada teknik ecoprint atau eco-printing. #Sobatwisata pasti tertarik",
+    description:
+      "Desa Genggelang ini juga punya karya seni Ecoprint. Ecoprint adalah sebuah usaha seni dan kerajinan yang berfokus pada teknik ecoprint atau eco-printing. #Sobatwisata pasti tertarik",
     imageUrl: ecoprint,
   },
 ];
@@ -71,42 +81,39 @@ interface ThreeDCardDemoProps {
 const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
   return (
     <CardContainer className="inter-var rounded-lg border-4 border-transparent transition-all duration-300 hover:border-gray-300">
-      <CardBody className="bg-[#141414] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-        <CardItem translateZ="50" className="text-xl font-bold text-white">
+      <CardBody className="bg-[#141414] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-2 sm:p-4"> {/* Kurangi padding di mobile */}
+        <CardItem
+          translateZ="150"
+          className="text-base sm:text-lg font-bold text-white transition-all duration-300 group-hover/card:text-white group-hover/card:bg-white/10 backdrop-blur-sm rounded-xl p-1 px-2"
+        >
           {product.name}
         </CardItem>
         <CardItem
           as="p"
-          translateZ="60"
-          className="text-neutral-500 transition-all duration-300 group-hover/card:text-neutral-300 text-left text-sm max-w-sm mt-2 dark:text-neutral-300"
+          translateZ="150"
+          className="text-neutral-500 transition-all duration-300 group-hover/card:text-white group-hover/card:bg-white/10 backdrop-blur-sm rounded-xl p-2 text-left text-xs sm:text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
           {product.description}
         </CardItem>
-        <CardItem translateZ="100" className="w-full mt-4">
+        <CardItem translateZ="180" className="w-full mt-4">
           <img
             src={product.imageUrl}
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl  group-hover/card:shadow-xl"
+            height="500"
+            width="500"
+            className="h-32 sm:h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt={product.name}
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-20">
+        <div className="flex justify-between items-center mt-6 sm:mt-12">
           <CardItem
             translateZ={20}
             as={Link}
             href="https://twitter.com/mannupaaji"
             target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal text-white"
+            className="px-3 py-2 rounded-xl text-xs font-normal text-white"
           >
             {product.price}
           </CardItem>
-          {/* <CardItem
-            translateZ={20}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-          >
-          </CardItem> */}
         </div>
       </CardBody>
     </CardContainer>
@@ -117,18 +124,19 @@ const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
 const UMKMGallery: React.FC = () => {
   return (
     <GallerySection id="umkm">
-      <GalleryHeader>Dukung UMKM Desa Wisata Genggelang!</GalleryHeader>
-      <GalleryDescription className="text-zinc-400">
+      <GalleryHeader className="text-[2rem] md:text-[2.5rem]">Dukung UMKM Desa Wisata Genggelang!</GalleryHeader>
+      <GalleryDescription className="text-lg md:text-[1.2rem] text-zinc-400">
         Temukan keunikan produk lokal mereka dan jadikan kunjungan Anda berarti
         dengan mendukung usaha-usaha kecil di sini.
       </GalleryDescription>
       <ProductGrid>
-      {products.map((product, index) => (
-        <ThreeDCardDemo key={index} product={product} />
-      ))}
+        {products.map((product, index) => (
+          <ThreeDCardDemo key={index} product={product} />
+        ))}
       </ProductGrid>
     </GallerySection>
   );
 };
 
 export default UMKMGallery;
+
