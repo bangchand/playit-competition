@@ -13,7 +13,7 @@ import Potensi from "./Section/Potensi";
 
 const VideoContainer = styled.section`
   width: 100%;
-  height: 90vh; 
+  height: 80vh; 
   background: black;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -35,7 +35,7 @@ const VideoContainer = styled.section`
 
 const GradientDivider = styled.div`
   position: absolute;
-  bottom: 8%;
+  bottom: 20%;
   left: 0;
   width: 100%;
   height: 120px;
