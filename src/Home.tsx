@@ -43,7 +43,7 @@ const GradientDivider = styled.div`
   z-index: 10;
 
   @media (max-width: 768px) {
-    bottom: 15%;
+    bottom: 12%;
     height: 250px;
   }
 `;
