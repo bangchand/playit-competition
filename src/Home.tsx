@@ -35,10 +35,10 @@ const VideoContainer = styled.section`
 
 const GradientDivider = styled.div`
   position: absolute;
-  bottom: 20%;
+  bottom: 19%;
   left: 0;
   width: 100%;
-  height: 120px;
+  height: 200px;
   background: linear-gradient(to top, rgba(0, 0, 0, 12), transparent);
   z-index: 10;
 `;
