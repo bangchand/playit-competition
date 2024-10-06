@@ -13,8 +13,7 @@ import Potensi from "./Section/Potensi";
 
 const VideoContainer = styled.section`
   width: 100%;
-  height: 100vh; // You can change this to a min-height for better responsiveness
-  min-height: 500px; // Minimum height for mobile
+  height: 90vh; 
   background: black;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -36,7 +35,7 @@ const VideoContainer = styled.section`
 
 const GradientDivider = styled.div`
   position: absolute;
-  bottom: -1%;
+  bottom: 8%;
   left: 0;
   width: 100%;
   height: 120px;
