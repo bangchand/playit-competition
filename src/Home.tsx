@@ -11,20 +11,20 @@ import Geografis from "./Section/Geografis";
 import Wisata from "./Section/Wisata";
 import Potensi from "./Section/Potensi";
 
-
-
 const VideoContainer = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100vh; // You can change this to a min-height for better responsiveness
+  min-height: 500px; // Minimum height for mobile
   background: black;
   position: relative;
   font-family: "Poppins", sans-serif;
+
   video {
     width: 100%;
     height: 100%;
-    // filter: brightness(70%);
     object-fit: cover;
     object-position: center;
+
     @media (max-width: 48em) {
       object-position: center 10%;
     }
@@ -49,6 +49,7 @@ const LogoContainer = styled.div`
   z-index: 20;
   top: 10px;
   width: 100px;
+
   img {
     width: 100%;
     height: auto;
@@ -56,14 +57,15 @@ const LogoContainer = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+  }
 `;
 
 const LeftLogo = styled(LogoContainer)`
   left: 10px;
   max-width: 80px;
-  `;
-  
-  const RightLogo = styled(LogoContainer)`
+`;
+
+const RightLogo = styled(LogoContainer)`
   top: 20px;
   right: 30px;
   max-width: 50px;
@@ -83,7 +85,7 @@ const Home: React.FC = () => {
           <img src={Ntb} alt="Logo NTB" />
         </a>
       </RightLogo>
-      <VideoContainer id="section-two" >
+      <VideoContainer id="section-two">
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center p-4">
           <motion.h1
             className="text-5xl font-bold text-white font-poppins"
@@ -116,10 +118,9 @@ const Home: React.FC = () => {
       <GradientDivider />
       <Potensi />
       <Profile />
-      <UMKMGallery /> 
-      <Geografis /> 
-      <Wisata /> 
-      
+      <UMKMGallery />
+      <Geografis />
+      <Wisata />
     </>
   );
 };

@@ -48,7 +48,7 @@ const Profile: React.FC = () => {
       </div>
 
       <h1 className="hidden md:block absolute bottom-[20%] left-[5%] md:left-[10%] text-white text-xl md:text-3xl font-semibold mb-4">
-        MENJELAJAHI KEINDAHAN <br /> DESA GENGGELANG
+        MENJELAJAHI KEINDAHAN <br /> <i className="text-[1.5rem] font-serif text-green-600">" Desa Genggelang " </i> 
       </h1>
     </section>
   );
