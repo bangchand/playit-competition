@@ -7,7 +7,7 @@ import { CardBody, CardContainer, CardItem } from "../components/Card3D";
 import cokelat from "../assets/cokelat.png";
 import bamboo from "../assets/coffeebamboo.png";
 import ecoprint from "../assets/ecoprint.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const GallerySection = styled.section`
   padding: 0 2rem;
@@ -23,7 +23,6 @@ const GallerySection = styled.section`
 `;
 
 const GalleryHeader = styled.h2`
-  font-weight: bold;
   color: white;
   margin-bottom: 2rem;
 `;
@@ -107,9 +106,9 @@ const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
         <div className="flex justify-between items-center mt-6 sm:mt-12">
           <CardItem
             translateZ={20}
-            as={Link}
-            href="https://twitter.com/mannupaaji"
-            target="__blank"
+            as="p"
+            // href="https://twitter.com/mannupaaji"
+            // target="__blank"
             className="px-3 py-2 rounded-xl text-xs font-normal text-white"
           >
             {product.price}
@@ -124,8 +123,15 @@ const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
 const UMKMGallery: React.FC = () => {
   return (
     <GallerySection id="umkm">
-      <GalleryHeader className="text-[2rem] md:text-[2.5rem]">Dukung UMKM Desa Wisata Genggelang!</GalleryHeader>
-      <GalleryDescription className="text-lg md:text-[1.2rem] text-zinc-400">
+      <GalleryHeader className="text-[2rem] md:text-[2.5rem]">
+        <h1 className="text-white text-[2rem] md:text-[2.5rem] font-bold">
+          Dukung UMKM!
+        </h1>
+      <p className="text-green-600 text-base ">
+       Desa Wisata Genggelang
+        </p>
+      </GalleryHeader>
+      <GalleryDescription className="text-base md:text-[1.2rem] text-zinc-400">
         Temukan keunikan produk lokal mereka dan jadikan kunjungan Anda berarti
         dengan mendukung usaha-usaha kecil di sini.
       </GalleryDescription>

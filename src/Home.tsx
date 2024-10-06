@@ -83,7 +83,7 @@ const Home: React.FC = () => {
           <img src={Ntb} alt="Logo NTB" />
         </a>
       </RightLogo>
-      <VideoContainer>
+      <VideoContainer id="section-two" >
         <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center p-4">
           <motion.h1
             className="text-5xl font-bold text-white font-poppins"
