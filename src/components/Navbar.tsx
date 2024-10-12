@@ -32,7 +32,7 @@ const Nav = styled.nav<{ isSticky: boolean }>`
     text-decoration: none;
     color: white;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 8px;
     transition: color 0.2s ease;
 

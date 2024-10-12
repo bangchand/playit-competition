@@ -5,15 +5,16 @@ import Navbar from "./components/Navbar";
 import Genggelang from "/logogenggelang.png";
 import Ntb from "/logontb.svg";
 import Profile from "../src/Section/Profile";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import UMKMGallery from "./Section/Umkm";
 import Geografis from "./Section/Geografis";
 import Wisata from "./Section/Wisata";
 import Potensi from "./Section/Potensi";
+import { TextGenerateEffect } from "./components/Text";
 
 const VideoContainer = styled.section`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background: black;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -22,7 +23,6 @@ const VideoContainer = styled.section`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 
     @media (max-width: 48em) {
       object-position: center 10%;
@@ -35,15 +35,15 @@ const VideoContainer = styled.section`
 
 const GradientDivider = styled.div`
   position: absolute;
-  bottom: 18%;
+  bottom: -3%;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 500px;
   background: linear-gradient(to top, rgba(0, 0, 0, 12), transparent);
   z-index: 10;
 
   @media (max-width: 768px) {
-    bottom: 12%;
+    bottom: -5%;
     height: 250px;
   }
 `;
@@ -98,35 +98,23 @@ const Home: React.FC = () => {
         </a>
       </RightLogo>
       <VideoContainer id="section-two">
-        <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center px-4">
-          <motion.h1
-            className="text-5xl font-bold text-white font-poppins"
-            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.2,
-              ease: "easeOut",
-            }}
-          >
-            Selamat Datang di Desa Genggelang
-          </motion.h1>
-          <motion.p
-            className="ml-2 mt-4 italic text-2xl text-white"
-            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.5,
-              duration: 1,
-              ease: "easeOut",
-            }}
-          >
-            Kabupaten Lombok Utara, Nusa Tenggara Barat
-          </motion.p>
+        <div className="absolute w-full top-1/2 transform -translate-y-1/2 text-center">
+          <TextGenerateEffect
+            words="Selamat Datang di Desa Genggelang"
+            className="text-[2rem] md:text-[3rem] md:px-0 font-bold text-white font-poppins"
+            filter={true}
+            duration={1.2}
+          />
+          <TextGenerateEffect
+            words="Kabupaten Lombok Utara, Nusa Tenggara Barat"
+            className="mt-3 md:text-xl ml-2 italic px-16"
+            filter={true}
+            duration={2}
+          />
         </div>
         <video src={MainVideo} loop muted autoPlay />
       </VideoContainer>
+
       <GradientDivider />
       <Potensi />
       <Profile />
