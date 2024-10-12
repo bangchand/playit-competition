@@ -2,7 +2,7 @@ import React from "react";
 
 const Profile: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen p-4 md:p-8 relative mb-40">
+    <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen p-8 md:p-8 relative mb-40">
       <div className="absolute inset-0 opacity-30 pointer-events-none"></div>
 
       <h1 className="hidden md:block text-center md:absolute md:top-16 md:right-[10%] text-white text-xl md:text-3xl font-semibold mb-4">
@@ -26,12 +26,11 @@ const Profile: React.FC = () => {
         </div>
       </div>
 
-      <h1 className="block md:hidden text-center italic mb-5 text-sm md:text-[2.5rem] md:absolute md:top-16 md:right-[10%] text-zinc-400 font-base">
+      <h1 className="block md:hidden text-center italic mt-2 text-sm md:text-[2.5rem] md:absolute md:top-16 md:right-[10%] text-zinc-400 font-base">
         Youtube: Desa Wisata Genggelang
       </h1> 
 
-      {/* Text Content */}
-      <div className="relative z-50 md:absolute md:left-[12%] top-20 backdrop-blur-md bg-[#141414] p-4 md:p-8 text-white/80 rounded-xl shadow-lg max-w-md md:max-w-lg md:mr-8 mb-8 md:mb-0 md:border border-white/30">
+      <div className="relative z-50 md:absolute md:left-[12%] top-5 md:top-10 backdrop-blur-md bg-[#141414] p-4 md:p-8 text-white/80 rounded-xl shadow-lg max-w-md md:max-w-lg md:mr-8 mb-8 md:mb-0 md:border border-white/30">
         <p className="text-sm md:text-base mb-4">
           Desa Genggelang, yang terletak di Kecamatan Gangga, Kabupaten Lombok
           Utara, adalah destinasi wisata menawan dengan panorama alam yang
