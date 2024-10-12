@@ -1,4 +1,5 @@
 import React from "react";
+import letakGeografis from "../assets/geografis.png"
 import { PinContainer } from "../components/3DPin";
 
 const Geografis: React.FC = () => {
@@ -14,16 +15,16 @@ const Geografis: React.FC = () => {
       </div>
 
       <div className="relative w-full md:w-1/2 max-w-4xl mb-4 md:mb-0 md:absolute md:left-[10%] md:top-[15%]">
-        {/* <img
+        <img
           src={letakGeografis}
           alt="Peta Desa Genggelang"
-          className="w-full object-cover rounded-lg"
-        /> */}
+          className="block md:hidden w-full object-cover rounded-lg"
+        />
 
         <PinContainer
           title="Desa Bentek"
           to="#"
-          containerClassName="w-full h-full absolute top-56 "
+          containerClassName="hidden md:block w-full h-full absolute top-56 "
         >
           <p></p>
         </PinContainer>
