@@ -20,7 +20,7 @@ export function LayoutGridDemo() {
         {" "}
         Desa Genggelang
       </p>
-      <div className="relative w-full h-screen bg-black float-right">
+      <div className="relative w-full h-screen bg-black float-right px-6 transition-all duration-300 ease-in-out">
         <LayoutGrid cards={cards} />
       </div>
     </div>
@@ -182,19 +182,19 @@ const cards = [
   {
     id: 6,
     content: <SkeletonSix />,
-    className: "col-span-1 cursor-pointer",
+    className: "hidden md:block col-span-1 cursor-pointer",
     thumbnail: tiupupus,
   },
   {
     id: 7,
     content: <SkeletonSeven />,
-    className: "col-span-1 cursor-pointer",
+    className: "hidden md:block col-span-1 cursor-pointer",
     thumbnail: tiungumbak,
   },
   {
     id: 4,
     content: <SkeletonFour />,
-    className: "md:col-span-2 cursor-pointer",
+    className: "hidden md:block md:col-span-2 cursor-pointer",
     thumbnail: tiupituq,
   },
 
