@@ -86,7 +86,7 @@ const Nav = styled.nav<{ isSticky: boolean }>`
 
     a.active {
       border-bottom: 2px solid white; /* Underline tetap saat link aktif */
-      border-color: #16a34a
+      border-color: #16a34a;
     }
 
     a::after {
@@ -94,7 +94,6 @@ const Nav = styled.nav<{ isSticky: boolean }>`
     }
   }
 `;
-
 
 const Navbar: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -139,8 +138,8 @@ const Navbar: React.FC = () => {
         <span className="text-black/[0.5]">|</span>
         <li>
           <a
-            href="/services"
-            className={location.pathname === "/services" ? "active" : ""}
+            href="/gallery"
+            className={location.pathname === "/gallery" ? "active" : ""}
           >
             Galeri
           </a>
