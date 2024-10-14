@@ -10,7 +10,7 @@ import ecoprint from "../assets/ecoprint.png";
 // import { Link } from "react-router-dom";
 
 const GallerySection = styled.section`
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 2rem 1rem;
   background-color: #000000;
   font-family: "Poppins", sans-serif;

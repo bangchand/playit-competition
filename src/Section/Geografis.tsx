@@ -47,7 +47,7 @@ const Geografis: React.FC = () => {
           Bentek, desa yang terletak di sisi barat Desa Genggelang.
         </p>
         <p className="text-sm md:text-base">
-        Lokasi Desa Genggelang berada di wilayah Kabupaten Lombok Utara, dan memiliki akses ke Laut Jawa serta dikelilingi oleh hutan tropis di bagian barat daya.-7
+        Lokasi Desa Genggelang berada di wilayah Kabupaten Lombok Utara, dan memiliki akses ke Laut Jawa serta dikelilingi oleh hutan tropis di bagian barat daya.
         </p>
       </div>
     </section>
