@@ -2,7 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { LayoutGrid } from "../components/LayoutGrid";
 import Navbar from "../components/Navbar";
 import { AuroraBackground } from "../components/AuroraBackground";
 
@@ -17,7 +16,6 @@ import img7 from "../assets/gallery/img7.jpg";
 import img8 from "../assets/gallery/img8.jpg";
 import img9 from "../assets/gallery/img9.jpg";
 import img10 from "../assets/gallery/img10.png";
-import img11 from "../assets/gallery/img11.png";
 import img12 from "../assets/gallery/img12.jpg";
 import img13 from "../assets/gallery/img13.jpg";
 import img14 from "../assets/gallery/img14.jpg";
