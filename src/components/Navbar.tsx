@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav = styled.nav<{ isSticky: boolean }>`
   position: ${({ isSticky }) => (isSticky ? "fixed" : "absolute")};
@@ -122,36 +122,36 @@ const Navbar: React.FC = () => {
     <Nav isSticky={isSticky}>
       <ul>
         <li>
-          <a href="/" className={location.pathname === "/" ? "active" : ""}>
+          <Link to="/" className={location.pathname === "/" ? "active" : ""}>
             Beranda
-          </a>
+          </Link>
         </li>
         <span className="text-black/[0.5]">|</span>
         <li>
-          <a
-            href="/potensi-desa"
+          <Link
+            to="/potensi-desa"
             className={location.pathname === "/potensi-desa" ? "active" : ""}
           >
             Profil
-          </a>
+          </Link>
         </li>
         <span className="text-black/[0.5]">|</span>
         <li>
-          <a
-            href="/gallery"
+          <Link
+            to="/gallery"
             className={location.pathname === "/gallery" ? "active" : ""}
           >
             Galeri
-          </a>
+          </Link>
         </li>
         <span className="text-black/[0.5]">|</span>
         <li>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className={location.pathname === "/contact" ? "active" : ""}
           >
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </Nav>
