@@ -8,7 +8,7 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/gallery",
+    path: "gallery",
     element: <Gallery />,
   },
 ]);
@@ -19,7 +19,6 @@ function App() {
       <StrictMode>
         <RouterProvider router={router} />;
       </StrictMode>
-      ,
     </>
   );
 }
