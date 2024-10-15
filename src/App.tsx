@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
 import Gallery from "./pages/gallery";
+import { StrictMode } from "react";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,7 +14,14 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <StrictMode>
+        <RouterProvider router={router} />;
+      </StrictMode>
+      ,
+    </>
+  );
 }
 
 export default App;
