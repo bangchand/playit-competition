@@ -107,11 +107,18 @@ const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
           <CardItem
             translateZ={20}
             as="p"
-            // href="https://twitter.com/mannupaaji"
-            // target="__blank"
+            href="#"
+            target="__blank"
             className="px-3 py-2 rounded-xl text-xs font-normal text-white"
           >
             {product.price}
+          </CardItem>
+          <CardItem
+            translateZ={20}
+            as="button"
+            className="px-4 py-2 rounded-xl bg-green-600 text-white text-xs font-bold"
+          >
+            Pesan
           </CardItem>
         </div>
       </CardBody>
