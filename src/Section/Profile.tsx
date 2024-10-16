@@ -2,7 +2,7 @@ import React from "react";
 
 const Profile: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen p-8 md:p-8 relative mb-40">
+    <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen relative mb-40">
       <div className="absolute inset-0 opacity-30 pointer-events-none"></div>
 
       <h1 className="hidden md:block text-center md:absolute md:top-16 md:right-[10%] text-white text-xl md:text-3xl font-semibold mb-4">
@@ -14,7 +14,7 @@ const Profile: React.FC = () => {
       </h1> 
       
 
-      <div className="w-full md:w-1/2 max-w-4xl md:-right-[40%] px-2 mb-0 md:mb-30 relative z-40">
+      <div className="w-full md:w-1/2 max-w-4xl md:-right-[40%] mb-0 md:mb-30 relative z-40">
         <div className="relative w-full h-0 pb-[56.25%]">
           <iframe
             src="https://www.youtube.com/embed/LOKq_bmPYlY"

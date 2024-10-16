@@ -12,7 +12,7 @@ import { LayoutGrid } from "../components/LayoutGrid";
 
 export function LayoutGridDemo() {
   return (
-    <div className="bg-black w-full">
+    <div className="bg-black w-full min-h-[150vh]">
       <div className="text-white text-[2rem] md:text-[2.5rem] font-bold text-center">
         Tempat Wisata
       </div>
@@ -20,7 +20,7 @@ export function LayoutGridDemo() {
         {" "}
         Desa Genggelang
       </p>
-      <div className="relative w-full h-screen bg-black float-right px-6 transition-all duration-300 ease-in-out">
+      <div className="w-full h-screen bg-black float-right px-6 transition-all duration-300 ease-in-out">
         <LayoutGrid cards={cards} />
       </div>
     </div>
@@ -140,20 +140,6 @@ const SkeletonSeven = () => {
     </div>
   );
 };
-// const SkeletonEight = () => {
-//   return (
-//     <div>
-//       <p className="font-bold md:text-4xl text-xl text-white">
-//         Air Terjun Tiu Pituq
-//       </p>
-//       <p className="font-normal text-base text-white"></p>
-//       <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-//       Tiu pituq adalah satu dari destinasi wisata di lombok utara yg bisa di tempuh dalam satu atau setengah hari dari mataram, dan bangsal , dan pengunjung bisa menikmati alam dengan mengambil gambar alam dengan spot2 kekinian dan mandi di kolam alami dan air terjun , yang berbagai macam bentuknya.
-//       </p>
-//     </div>
-//   );
-// };
-
 const cards = [
   {
     id: 1,
@@ -197,21 +183,10 @@ const cards = [
     className: "hidden md:block md:col-span-2 cursor-pointer",
     thumbnail: tiupituq,
   },
-
-  //   {
-  //     id: 8,
-  //     content: <SkeletonEight />,
-  //     className: "md:col-span-2 cursor-pointer",
-  //     thumbnail: tiupituq,
-  //   },
 ];
 
 const Wisata: React.FC = () => {
-  return (
-    <div>
-      <LayoutGridDemo />
-    </div>
-  );
+  return <LayoutGridDemo />;
 };
 
 export default Wisata;
