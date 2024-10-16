@@ -1,8 +1,7 @@
 "use client";
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../libs/utils";
-
 
 type Card = {
   id: number;
@@ -26,7 +25,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   return (
-    <div className="w-full h-full p-10 grid grid-cols-1 md:grid-cols-3  max-w-7xl mx-auto gap-4 relative">
+    <div className="w-full h-full grid grid-cols-1 md:grid-cols-3 gap-4 relative">
       {cards.map((card, i) => (
         <div key={i} className={cn(card.className, "")}>
           <motion.div
@@ -64,11 +63,7 @@ const ImageComponent = ({ card }: { card: Card }) => {
     <motion.img
       layoutId={`image-${card.id}-image`}
       src={card.thumbnail}
-      height="500"
-      width="500"
-      className={cn(
-        "object-cover absolute inset-0 h-full w-full transition duration-200"
-      )}
+      className={cn("object-cover h-[200px] md:h-[250px] lg:h-[300px] w-full transition duration-200")}
       alt="thumbnail"
     />
   );
@@ -104,7 +99,7 @@ const SelectedCard = ({ selected }: { selected: Card | null }) => {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="relative px-8 pb-4 z-[70]"
+        className="relative pb-4 z-[70]"
       >
         {selected?.content}
       </motion.div>

@@ -3,7 +3,7 @@ import { potensiDesa } from "../dataPotensi";
 
 const Potensi: React.FC = () => {
   return (
-    <section id="potensi-desa" className="w-full mt-32 mb-20 bg-black">
+    <section id="potensi-desa" className="w-full my-32 bg-black">
       <h2 className="text-[2rem] md:text-[2.5rem] font-bold text-white text-center mb-3">
         Potensi Desa
       </h2>
