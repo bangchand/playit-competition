@@ -25,6 +25,7 @@ import img17 from "../assets/gallery/img17.jpg";
 import img18 from "../assets/gallery/img18.jpg";
 import img19 from "../assets/gallery/img19.jpg";
 import { FocusCards } from "../components/FocusCard";
+import Footer from "../components/Footer";
 
 const GradientDivider = styled.div`
   position: absolute;
@@ -127,6 +128,7 @@ export function LayoutGridDemo() {
           <FocusCards cards={cards} />
         </div>
       </div>
+      <Footer />
     </>
   );
 }

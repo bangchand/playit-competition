@@ -11,6 +11,7 @@ import Geografis from "../Section/Geografis";
 import Wisata from "../Section/Wisata";
 import Potensi from "../Section/Potensi";
 import { TextGenerateEffect } from "../components/Text";
+import Footer from "../components/Footer";
 
 const VideoContainer = styled.section`
   width: 100%;
@@ -123,6 +124,7 @@ const Home: React.FC = () => {
         <Geografis />
         <Wisata />
       </div>
+      <Footer />
     </>
   );
 };
