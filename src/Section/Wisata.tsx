@@ -12,7 +12,7 @@ import { LayoutGrid } from "../components/LayoutGrid";
 
 export function LayoutGridDemo() {
   return (
-    <div className="bg-black w-full min-h-[150vh]">
+    <div className="bg-black w-full h-[250vh] md:h-[150vh]">
       <div className="text-white text-[2rem] md:text-[2.5rem] font-bold text-center">
         Tempat Wisata
       </div>
@@ -20,7 +20,7 @@ export function LayoutGridDemo() {
         {" "}
         Desa Genggelang
       </p>
-      <div className="w-full h-screen bg-black float-right px-6 transition-all duration-300 ease-in-out">
+      <div className="w-full bg-black float-right transition-all duration-300 ease-in-out">
         <LayoutGrid cards={cards} />
       </div>
     </div>
@@ -144,7 +144,7 @@ const cards = [
   {
     id: 1,
     content: <SkeletonOne />,
-    className: "md:col-span-2 cursor-pointer",
+    className: "col-span-1 md:col-span-2 cursor-pointer",
     thumbnail: terjun,
   },
   {
@@ -156,7 +156,7 @@ const cards = [
   {
     id: 5,
     content: <SkeletonFive />,
-    className: "md:col-span-1 cursor-pointer",
+    className: "col-span-1 md:col-span-1 cursor-pointer",
     thumbnail: petikcoklat,
   },
   {
@@ -168,19 +168,19 @@ const cards = [
   {
     id: 6,
     content: <SkeletonSix />,
-    className: "hidden md:block col-span-1 cursor-pointer",
+    className: "col-span-1 cursor-pointer",
     thumbnail: tiupupus,
   },
   {
     id: 7,
     content: <SkeletonSeven />,
-    className: "hidden md:block col-span-1 cursor-pointer",
+    className: "col-span-1 cursor-pointer",
     thumbnail: tiungumbak,
   },
   {
     id: 4,
     content: <SkeletonFour />,
-    className: "hidden md:block md:col-span-2 cursor-pointer",
+    className: "col-span-1 md:col-span-2 cursor-pointer",
     thumbnail: tiupituq,
   },
 ];
