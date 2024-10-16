@@ -49,28 +49,8 @@
 // import { useRef } from "react";
 
 function CardDemo() {
-  // const iframeRef = useRef<HTMLIFrameElement>(null);
-
-  // const handleMouseEnter = () => {
-  //   const iframe = iframeRef.current;
-  //   if (iframe) {
-  //     // Ganti src untuk menambahkan autoplay ketika hover
-  //     iframe.src =
-  //       "https://www.youtube.com/embed/LOKq_bmPYlY?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0";
-  //   }
-  // };
-
-  // const handleMouseLeave = () => {
-  //   const iframe = iframeRef.current;
-  //   if (iframe) {
-  //     // Hentikan autoplay dengan mengubah src kembali
-  //     iframe.src =
-  //       "https://www.youtube.com/embed/LOKq_bmPYlY?mute=1&loop=1&controls=0&modestbranding=1&rel=0";
-  //   }
-  // };
-
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen relative mb-32">
+    <section className="min-h-[45rem] flex flex-col md:flex-row items-center justify-between bg-black relative mb-32">
       <div className="absolute inset-0 opacity-30 pointer-events-none"></div>
 
       <h1 className="hidden md:block text-center md:absolute md:top-16 md:right-[10%] text-white text-xl md:text-3xl font-semibold mb-4">
@@ -97,7 +77,7 @@ function CardDemo() {
         Youtube: Desa Wisata Genggelang
       </h1>
 
-      <div className="relative z-50 md:absolute md:left-[12%] top-5 md:top-10 backdrop-blur-md bg-[#141414] p-4 md:p-8 text-white/80 rounded-xl shadow-lg max-w-md md:max-w-lg md:mr-8 mb-8 md:mb-0 md:border border-white/30">
+      <div className="min-w-[40%] relative z-50 md:absolute md:left-[12%] top-5 md:top-10 backdrop-blur-md bg-[#141414] p-4 md:p-8 text-white/80 rounded-xl shadow-lg max-w-md md:max-w-lg md:mr-8 mb-8 md:mb-0 md:border border-white/30">
         <p className="text-sm md:text-base mb-4">
           Desa Genggelang, yang terletak di Kecamatan Gangga, Kabupaten Lombok
           Utara, adalah destinasi wisata menawan dengan panorama alam yang

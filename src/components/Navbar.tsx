@@ -129,8 +129,8 @@ const Navbar: React.FC = () => {
         <span className="text-black/[0.5]">|</span>
         <li>
           <Link
-            to="/potensi-desa"
-            className={location.pathname === "/potensi-desa" ? "active" : ""}
+            to="/about"
+            className={location.pathname === "/about" ? "active" : ""}
           >
             Profil
           </Link>
