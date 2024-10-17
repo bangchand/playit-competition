@@ -21,7 +21,7 @@ export function Wisata() {
           Desa Genggelang
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="relative h-[224px] md:h-[274px] lg:h-[324px] xl:h-[374px] col-span-1 sm:col-span-3">
+          <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative h-[224px] md:h-[274px] lg:h-[324px] xl:h-[374px] col-span-1 sm:col-span-3">
             <DirectionAwareHover
               className="h-[224px] md:h-[274px] lg:h-[324px] xl:h-[374px]"
               imageUrl={rumahpohon}
@@ -36,7 +36,7 @@ export function Wisata() {
             </DirectionAwareHover>
           </div>
 
-          <div className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px] sm:col-span-2">
+          <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px] sm:col-span-2">
             <DirectionAwareHover
               className="h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]"
               imageUrl={tiupituq}
@@ -52,7 +52,7 @@ export function Wisata() {
             </DirectionAwareHover>
           </div>
 
-          <div className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
+          <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
             <DirectionAwareHover
               className="h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]"
               imageUrl={terjun}
@@ -68,7 +68,7 @@ export function Wisata() {
             </DirectionAwareHover>
           </div>
 
-          <div className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
+          <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
             <DirectionAwareHover
               className="h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]"
               imageUrl={tiupupus}
@@ -83,7 +83,7 @@ export function Wisata() {
             </DirectionAwareHover>
           </div>
 
-          <div className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px] sm:col-span-2">
+          <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px] sm:col-span-2">
             <DirectionAwareHover
               className="h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]"
               imageUrl={tiungumbak}
@@ -97,9 +97,9 @@ export function Wisata() {
               </p>
             </DirectionAwareHover>
           </div>
-          <div className="relative col-span-full">
+          <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative col-span-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
+              <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
                 <DirectionAwareHover
                   className="h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]"
                   imageUrl={petikcoklat}
@@ -114,7 +114,7 @@ export function Wisata() {
                 </DirectionAwareHover>
               </div>
 
-              <div className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
+              <div data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" className="relative h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]">
                 <DirectionAwareHover
                   className="h-[224px] sm:h-[174px] md:h-[224px] lg:h-[274px] xl:h-[324px]"
                   imageUrl={museum}
