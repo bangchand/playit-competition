@@ -41,7 +41,7 @@ const Footer = ( {className} : footerType) => {
           <Link to="/" className={location.pathname === "/" ? "active" : "text-white"}>
             Beranda
           </Link>
-          <Link to="/about" className={location.pathname === "/profile" ? "active" : "text-white"}>
+          <Link to="/about" className={location.pathname === "/about" ? "active" : "text-white"}>
             Profil
           </Link>
           <Link to="/gallery" className={location.pathname === "/gallery" ? "active" : "text-white"}>
