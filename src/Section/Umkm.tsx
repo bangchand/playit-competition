@@ -20,11 +20,11 @@ const GallerySection = styled.section`
 
 const GalleryHeader = styled.h2`
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 `;
 
 const GalleryDescription = styled.p`
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 `;
 
 const ProductGrid = styled.div`
@@ -124,13 +124,20 @@ const UMKMGallery: React.FC = () => {
         </h1>
         <p className="text-green-600 text-base ">Desa Wisata Genggelang</p>
       </GalleryHeader>
-      <GalleryDescription className="text-base md:text-[1.2rem] text-zinc-400 max-w-4xl mx-auto">
+      <GalleryDescription className="text-base md:text-[1.2rem] text-zinc-400 max-w-2xl mx-auto">
         Temukan keunikan produk lokal mereka dan jadikan kunjungan Anda berarti
         dengan mendukung usaha-usaha kecil di sini.
       </GalleryDescription>
       <ProductGrid>
         {products.map((product, index) => (
-          <ThreeDCardDemo key={index} product={product} />
+          <div
+            className=""
+            data-aos="zoom-in"
+            data-aos-easing="ease"
+            data-aos-duration="600"
+          >
+            <ThreeDCardDemo key={index} product={product} />
+          </div>
         ))}
       </ProductGrid>
     </GallerySection>

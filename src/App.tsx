@@ -1,7 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Home from "./pages/home";
 import Gallery from "./pages/gallery";
-import React from "react";
+import React, { useEffect } from "react";
 import About from "./pages/about";
 import Page404 from "./pages/Errors/404";
 
@@ -25,6 +27,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <React.StrictMode>
