@@ -49,14 +49,15 @@ export const PinContainer = ({
         className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
       >
         <div
-          style={{
-            transform: transform,
-            backgroundImage: `url(${letakGeografis})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-          className="absolute left-1/2 py-24 px-[11rem] -top-60 rounded-xl md:py-56 md:px-[25rem] md:top-1/2 flex justify-start items-start shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+            style={{
+              transform: transform,
+              backgroundImage: `url(${letakGeografis})`,
+              backgroundSize: "cover",
+              maxWidth: "500px",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          className="absolute 2xl:left- py-24 px-[11rem] 2xl:py-[14rem] 2xl:px-[24rem] -top-60 rounded-xl md:-left-[3rem] md:py-[10.5rem] md:px-[19rem] md:top-1/2 flex justify-start items-start shadow-[0_8px_16px_rgb(0_0_0/0.4)] border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
         >
           <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-red-400/0 via-white-400/90 to-white-400/0 transition-all duration-500 opacity-0 group-hover/pin:opacity-50"></span>
 

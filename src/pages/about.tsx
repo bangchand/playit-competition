@@ -2,10 +2,11 @@
 import { StickyScroll } from "../components/StickyScrollReveal"; // Import sesuai path kamu
 import { AuroraBackground } from "../components/AuroraBackground"; // Import AuroraBackground
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 // Data timeline yang sudah diberikan
 const timelineItems = [
-  {
+  { 
     date: "Sejarah Desa Genggelang",
     title: "Lokasi",
     description:
@@ -58,11 +59,14 @@ const timelineItems = [
 
 const About = () => {
   return (
+    <>
     <AuroraBackground className="lg:p-32 min-h-full">
       <Navbar />
       <h1 className="text-3xl font-bold mb-8 text-white">About Us</h1>
       <StickyScroll content={timelineItems} />
     </AuroraBackground>
+      <Footer className="mt-0"/>
+    </>
   );
 };
 
