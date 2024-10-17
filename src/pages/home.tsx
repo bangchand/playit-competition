@@ -120,7 +120,11 @@ const Home: React.FC = () => {
         <GradientDivider />
         <Potensi />
         <Profile />
-        <UMKMGallery />
+        <div className="relative">
+          <div className="bg-[rgba(15,99,15,0.2)] w-full sm:w-[800px] h-[400px] blur-[80px] rounded-full absolute -left-10"></div>
+          <div className="bg-[rgba(15,99,15,0.2)] w-[200px] sm:w-[600px] h-[400px] blur-[80px] rounded-full absolute right-0 top-96 sm:top-44"></div>
+          <UMKMGallery />
+        </div>
         <Geografis />
         <Wisata />
       </div>
