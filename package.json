@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^9.114.4",
+    "@react-three/fiber": "^8.17.10",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
@@ -30,7 +32,9 @@
     "react-router-dom": "^6.27.0",
     "styled-components": "^5.3.11",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.169.0",
+    "three-globe": "^2.32.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
