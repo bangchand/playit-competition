@@ -8,7 +8,7 @@ import Profile from "../Section/Profile";
 // import { motion } from "framer-motion";
 import UMKMGallery from "../Section/Umkm";
 import Geografis from "../Section/Geografis";
-import Wisata from "../Section/Wisata";
+import { Wisata } from "../Section/Wisata";
 import Potensi from "../Section/Potensi";
 import { TextGenerateEffect } from "../components/Text";
 import Footer from "../components/Footer";
@@ -40,7 +40,7 @@ const GradientDivider = styled.div`
   left: 0;
   width: 100%;
   height: 500px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 12), transparent);
+  background: linear-gradient(to top, rgba(4, 5, 4, 12), transparent);
   z-index: 10;
 
   @media (max-width: 768px) {

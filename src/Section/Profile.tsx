@@ -50,7 +50,7 @@
 
 function CardDemo() {
   return (
-    <section className="min-h-[45rem] flex flex-col md:flex-row items-center justify-between bg-black relative mb-32">
+    <section className="min-h-[45rem] flex flex-col md:flex-row items-center justify-between relative mb-32">
       <div className="absolute inset-0 opacity-30 pointer-events-none"></div>
 
       <h1 className="hidden md:block text-center md:absolute md:top-16 md:right-[10%] text-white text-xl md:text-3xl font-semibold mb-4">

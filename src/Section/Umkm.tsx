@@ -9,7 +9,6 @@ import ecoprint from "../assets/ecoprint.png";
 // import { Link } from "react-router-dom";
 
 const GallerySection = styled.section`
-  background-color: #000000;
   font-family: "Poppins", sans-serif;
   text-align: center;
 
@@ -77,7 +76,7 @@ interface ThreeDCardDemoProps {
 const ThreeDCardDemo: React.FC<ThreeDCardDemoProps> = ({ product }) => {
   return (
     <CardContainer className="inter-var rounded-lg border-4 border-transparent transition-all duration-300 hover:border-gray-300">
-      <CardBody className="bg-[#141414] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-2 sm:p-4">
+      <CardBody className="bg-[#141414] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  border-black/[0.1] w-full h-auto rounded-xl p-2 sm:p-4">
         <div className="p-3 lg:p-0 xl:p-3">
           <CardItem
             translateZ="150"
