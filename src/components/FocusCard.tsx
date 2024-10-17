@@ -15,6 +15,9 @@ export const Card = React.memo(
     setHovered: React.Dispatch<React.SetStateAction<number | null>>;
   }) => (
     <div
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-duration="700"
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(

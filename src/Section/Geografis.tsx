@@ -4,7 +4,7 @@ import { PinContainer } from "../components/3DPin";
 
 const Geografis: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between bg-black min-h-screen mx-8 relative">
+    <section className="flex flex-col md:flex-row items-center justify-between  min-h-screen mx-8 relative">
       <div className="absolute inset-0 opacity-30 pointer-events-none"></div>
 
       <div className="md:absolute md:top-24 md:right-[5%] w-full md:w-auto text-center md:text-right mb-6 md:mb-0">
