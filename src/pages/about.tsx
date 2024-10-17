@@ -1,7 +1,6 @@
 "use client";
 import React, { Suspense } from "react";
 import { motion } from "framer-motion";
-import { TextGenerateEffect } from "../components/Text";
 import Navbar from "../components/Navbar";
 import { Spotlight } from "../components/Spotlight";
 import { Timeline } from "../components/Timeline";
