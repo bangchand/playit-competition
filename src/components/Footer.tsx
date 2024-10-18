@@ -18,20 +18,21 @@ const Footer = ({ className }: footerType) => {
 
   return (
     <>
-      <footer className={`relative ${className} bg-neutral-900 px-4 pt-10`}>
-        <div className="absolute -top-10 left-[52%] h-16 w-16 -translate-x-1/2 rounded-full bg-neutral-900 p-2">
-          <img
-            className="h-full object-contain"
-            src="logogenggelang.png"
-            alt=""
-          />
-        </div>
-        <div className="absolute -top-10 left-[47%] h-16 w-16 -translate-x-1/2 rounded-full bg-neutral-900 px-5 py-3 p-2">
-          <img className="h-full object-contain" src="logontb.svg" alt="" />
+      <footer
+        className={`relative ${className} bg-neutral-900 px-6 pt-6 sm:pt-10`}
+      >
+        <div className="w-full h-11 absolute left-0 -top-6 flex justify-center items-center">
+          <div className="h-full bg-neutral-900 rounded-lg">
+            <img
+              className="h-full object-contain"
+              src="logogenggelang.png"
+              alt=""
+            />
+          </div>
         </div>
         <Nav
           aria-label="Footer Navigation"
-          className="mx-auto justify-center mb-5 flex max-w-lg flex-col gap-10 text-center sm:flex-row sm:text-left"
+          className="mx-auto justify-center flex max-w-lg flex-col gap-6 sm:gap-10 text-center sm:flex-row sm:text-left"
         >
           <Link
             to="/"
@@ -62,7 +63,7 @@ const Footer = ({ className }: footerType) => {
             Contact
           </Link>
         </Nav>
-        <p className="py-5 text-center text-gray-300">
+        <p className="pb-2 pt-4 text-center text-[rgba(255,255,255,0.5)] text-sm">
           © {currentYear}. Desa Genggelang. All Rights Reserved
         </p>
       </footer>
