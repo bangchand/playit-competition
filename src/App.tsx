@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import Home from "./pages/home";
 import Gallery from "./pages/gallery";
 import React, { useEffect } from "react";
-import About from "./pages/about";
+import { About } from "./pages/about";
 import Page404 from "./pages/Errors/404";
 
 const router = createBrowserRouter([
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <Gallery />,
   },
   {
-    path: "/About",
+    path: "/about",
     element: <About />,
   },
   {
