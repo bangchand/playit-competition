@@ -30,12 +30,12 @@ const Geografis: React.FC = () => {
         </PinContainer>
       </div>
 
-      <h1 className="absolute top-[13%] left-[10%] md:top-[66%] 2xl:left-[5%] 2xl:top-[66%] text-white/70 transition-all duration-300 hover:text-white italic pl-3 pt-2 text-[10px] md:text-sm mb-4">
+      <h1 className="absolute top-[13%] left-[10%] md:top-[66%] 2xl:left-[1%] 2xl:top-[66%] text-white/70 transition-all duration-300 hover:text-white italic pl-3 pt-2 text-[10px] md:text-sm mb-4">
         Kabupaten Lombok Utara, Nusa Tenggara Barat
       </h1>
 
 
-      <div className="md:hidden bg-[#141414] backdrop-blur-md p-4 text-white/80 rounded-xl shadow-lg md:border border-white/30 w-full md:w-auto md:max-w-md md:mb-0 md:absolute md:left-[63%] md:top-[27%]">
+      <div className="bg-[#141414] backdrop-blur-md p-4 text-white/80 rounded-xl shadow-lg md:border border-white/30 w-full md:w-auto md:max-w-md md:mb-0 md:absolute md:left-[63%] md:top-[27%]">
         <p className="text-sm md:text-base mb-4">
           - Sebelah Utara: Desa Genggelang berbatasan langsung dengan Laut Jawa,
           memberikan akses ke kawasan pantai. <br />
