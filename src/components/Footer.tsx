@@ -19,7 +19,7 @@ const Footer = ( {className} : footerType) => {
 
   return (
     <> 
-      <footer className={`relative mt-20 ${className} bg-neutral-900 px-4 pt-10`}>
+      <footer className={`relative ${className} bg-neutral-900 px-4 pt-10`}>
          <div className="absolute -top-10 left-[52%] h-16 w-16 -translate-x-1/2 rounded-full bg-neutral-900 p-2">
           <img
             className="h-full object-contain"

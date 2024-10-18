@@ -65,7 +65,7 @@ const About = () => {
       <h1 className="text-3xl font-bold mb-8 text-white">About Us</h1>
       <StickyScroll content={timelineItems} />
     </AuroraBackground>
-      <Footer className="mt-0"/>
+      <Footer/>
     </>
   );
 };
