@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { useEffect } from "react";
 
 interface footerType {
   className?: string;
@@ -15,6 +16,12 @@ const Footer = ({ className }: footerType) => {
       }
     }
   `;
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

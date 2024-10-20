@@ -30,7 +30,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div className="w-full font-sans" ref={containerRef}>
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
+        <h2 className="text-lg md:text-4xl font-bold mb-4 text-white max-w-4xl">
           Informasi Desa Genggelang
         </h2>
         <p className="text-neutral-300 text-sm md:text-base max-w-sm">

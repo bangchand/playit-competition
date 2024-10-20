@@ -17,16 +17,16 @@ const Nav = styled.nav<{ isSticky: boolean }>`
       ? "0 4px 10px rgba(0, 0, 0, 0.3)"
       : "0 4px 6px rgba(0, 0, 0, 0.1)"};
   display: flex;
-  flex-direction: column;
   align-items: center;
   z-index: 999;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 
   ul {
     display: flex;
-    gap: 10px;
+    gap: 20px;
   }
 
+  /* Gaya untuk link navbar */
   a {
     position: relative;
     text-decoration: none;
@@ -36,7 +36,7 @@ const Nav = styled.nav<{ isSticky: boolean }>`
     padding: 8px;
     transition: color 0.2s ease;
 
-    /* Gaya underline untuk layar besar */
+    /* Animasi underline untuk link */
     &::after {
       content: "";
       position: absolute;
@@ -48,37 +48,83 @@ const Nav = styled.nav<{ isSticky: boolean }>`
       transition: width 0.4s ease;
     }
 
-    &:hover::after,
-    &:hover ~ a::after {
+    &:hover::after {
       width: 100%;
     }
 
     &.active {
-      color: #16a34a; /* Warna saat aktif */
+      color: #16a34a;
       font-weight: bold;
+
       &::after {
-        width: 100%; /* Garis bawah penuh untuk link aktif */
+        width: 100%;
         background-color: #16a34a;
       }
     }
   }
 
-  /* Atur posisi dan jarak logo Genggelang */
-  #genggelang {
-    position: absolute;
-    top: 50%;
-    left: -600px; /* Jarak antara logo dan navbar */
-    transform: translateY(-50%);
-    max-width: 100px;
-    height: auto;
+  /* Gaya untuk span di dropdown tanpa animasi */
+  .dropdown-wrapper > span {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    transition: color 0.2s ease;
   }
 
-  /* Gaya khusus untuk mobile */
+  /* Dropdown styling */
+  .dropdown-wrapper {
+    position: relative;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 150%; /* Tepat di bawah elemen "Contact" */
+    right: -20%; /* Tidak ada pergeseran ke kanan */
+    transform: translateY(10%); /* Pastikan tidak ada pergeseran vertikal */
+    background: ${({ isSticky }) =>
+      isSticky ? "rgba(30, 30, 30, 0.9)" : "rgba(0, 10, 0, 0.7)"};
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    a {
+      padding: 8px 12px;
+      color: white;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+
+  }
+
+  .dropdown-wrapper {
+    position: relative; /* Supaya dropdown mengikuti posisi "Contact" */
+  }
+
+  /* Menampilkan dropdown */
+  .dropdown-wrapper:hover .dropdown {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   @media (max-width: 768px) {
     top: 3%;
     margin: 0 0 5px 4px;
     padding: 8px 15px;
     font-size: 14px;
+
+
 
     a {
       border-bottom: 2px solid transparent; /* Menggunakan border-bottom untuk underline di mobile */
@@ -97,25 +143,17 @@ const Nav = styled.nav<{ isSticky: boolean }>`
 
 const Navbar: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const location = useLocation(); // Mengambil URL path saat ini
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       const sectionTwo = document.getElementById("section-two");
       const sectionTwoTop = sectionTwo?.offsetTop || 0;
-
-      if (window.scrollY >= sectionTwoTop) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY >= sectionTwoTop);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -126,7 +164,6 @@ const Navbar: React.FC = () => {
             Beranda
           </Link>
         </li>
-        <span className="text-black/[0.5]">|</span>
         <li>
           <Link
             to="/about"
@@ -135,7 +172,6 @@ const Navbar: React.FC = () => {
             Profil
           </Link>
         </li>
-        <span className="text-black/[0.5]">|</span>
         <li>
           <Link
             to="/gallery"
@@ -144,14 +180,13 @@ const Navbar: React.FC = () => {
             Galeri
           </Link>
         </li>
-        <span className="text-black/[0.5]">|</span>
-        <li>
-          <Link
-            to="/contact"
-            className={location.pathname === "/contact" ? "active" : ""}
-          >
-            Contact
-          </Link>
+        <li className="dropdown-wrapper">
+          <span>Contact</span>
+          <div className="dropdown">
+            <Link to="https://instagram.com/genggelang_wisata">Instagram</Link>
+            <Link to="/contact/phone">Twitter</Link>
+            <Link to="/contact/address">Facebook</Link>
+          </div>
         </li>
       </ul>
     </Nav>
