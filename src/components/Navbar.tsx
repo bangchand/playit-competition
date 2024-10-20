@@ -82,8 +82,8 @@ const Nav = styled.nav<{ isSticky: boolean }>`
   .dropdown {
     position: absolute;
     top: 150%; /* Tepat di bawah elemen "Contact" */
-    left: -20%; /* Default pergeseran ke kiri untuk desktop */
-    transform: translateY(10%);
+    right: -20%; /* Tidak ada pergeseran ke kanan */
+    transform: translateY(10%); /* Pastikan tidak ada pergeseran vertikal */
     background: ${({ isSticky }) =>
       isSticky ? "rgba(30, 30, 30, 0.9)" : "rgba(0, 10, 0, 0.7)"};
     padding: 10px;
@@ -104,6 +104,11 @@ const Nav = styled.nav<{ isSticky: boolean }>`
         background-color: rgba(255, 255, 255, 0.1);
       }
     }
+
+  }
+
+  .dropdown-wrapper {
+    position: relative; /* Supaya dropdown mengikuti posisi "Contact" */
   }
 
   /* Menampilkan dropdown */
@@ -114,17 +119,12 @@ const Nav = styled.nav<{ isSticky: boolean }>`
   }
 
   @media (max-width: 768px) {
-    .dropdown {
-      left: unset;  /* Menghapus left */
-      right: -20%;  /* Mengganti menjadi right pada mobile */
-    }
-  }
-
-  @media (max-width: 768px) {
     top: 3%;
     margin: 0 0 5px 4px;
     padding: 8px 15px;
     font-size: 14px;
+
+
 
     a {
       border-bottom: 2px solid transparent; /* Menggunakan border-bottom untuk underline di mobile */
