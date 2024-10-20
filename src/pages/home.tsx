@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainVideo from "/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Genggelang from "/logogenggelang.png";
 import Ntb from "/logontb.svg";
 import Profile from "../Section/Profile";
-// import { motion } from "framer-motion";
 import UMKMGallery from "../Section/Umkm";
 import Geografis from "../Section/Geografis";
 import { Wisata } from "../Section/Wisata";
+import Wisata2 from "../Section/Wisata2";
 import Potensi from "../Section/Potensi";
 import { TextGenerateEffect } from "../components/Text";
 import Footer from "../components/Footer";
@@ -77,6 +77,19 @@ const RightLogo = styled(LogoContainer)`
 `;
 
 const Home: React.FC = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -126,7 +139,7 @@ const Home: React.FC = () => {
           <UMKMGallery />
         </div>
         <Geografis />
-        <Wisata />
+        {isMobile ? <Wisata2 /> : <Wisata />}
       </div>
       <Footer />
     </>
