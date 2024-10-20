@@ -12,7 +12,7 @@ import { LayoutGrid } from "../components/LayoutGrid";
 
 export function LayoutGridDemo() {
   return (
-    <div className="bg-black w-full min-h-[150vh] mt-20 m-0">
+    <div className="bg-black w-full min-h-[120vh] mt-20 mb-0">
       <div className="text-white text-[2rem] md:text-[2.5rem] font-bold text-center">
         Tempat Wisata
       </div>
