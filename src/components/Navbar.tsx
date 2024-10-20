@@ -117,11 +117,23 @@ const Nav = styled.nav<{ isSticky: boolean }>`
     transform: translateY(0);
   }
 
-  /* Gaya khusus untuk mobile */
   @media (max-width: 768px) {
-    ul {
-      flex-direction: column;
-      gap: 15px;
+    top: 3%;
+    margin: 0 0 5px 4px;
+    padding: 8px 15px;
+    font-size: 14px;
+
+    a {
+      border-bottom: 2px solid transparent; /* Menggunakan border-bottom untuk underline di mobile */
+    }
+
+    a.active {
+      border-bottom: 2px solid white; /* Underline tetap saat link aktif */
+      border-color: #16a34a;
+    }
+
+    a::after {
+      content: none; /* Nonaktifkan animasi underline di mobile */
     }
   }
 `;
@@ -168,7 +180,7 @@ const Navbar: React.FC = () => {
         <li className="dropdown-wrapper">
           <span>Contact</span>
           <div className="dropdown">
-            <Link to="/contact/email">Instagram</Link>
+            <Link to="https://instagram.com/genggelang_wisata">Instagram</Link>
             <Link to="/contact/phone">Twitter</Link>
             <Link to="/contact/address">Facebook</Link>
           </div>

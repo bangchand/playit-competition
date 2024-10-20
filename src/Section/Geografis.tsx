@@ -14,7 +14,7 @@ const Geografis: React.FC = () => {
         </h1>
       </div>
 
-      <div className="relative z-0 w-full lg:w-1/2 max-w-4xl mb-4 md:mb-0 md:absolute lg:absolute md:left-[10%] md:top-[20%] lg:left-[10%] lg:top-[15%]">
+      <div className="relative z-0 w-full lg:w-full max-w-4xl mb-4 md:mb-0 md:absolute lg:absolute md:left-[10%] md:top-[20%] lg:left-[3%] xl:left-0 lg:top-[25%]">
         <img
           src={letakGeografis}
           alt="Peta Desa Genggelang"
