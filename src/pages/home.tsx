@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MainVideo from "/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
@@ -76,7 +76,24 @@ const RightLogo = styled(LogoContainer)`
   max-width: 50px;
 `;
 
+const LoadingEffect = () => {
+  return (
+    <div className="w-full h-screen text-white flex justify-center items-center z-0">
+      <div className="text-center">
+        <h1>Video Loading...</h1>
+        <div className="loading"></div>
+      </div>
+    </div>
+  );
+};
+
 const Home: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleLoadedData = () => {
+    setIsLoading(false);
+  };
+
   return (
     <>
       <Navbar />
@@ -113,7 +130,15 @@ const Home: React.FC = () => {
             duration={2}
           />
         </div>
-        <video src={MainVideo} loop muted autoPlay />
+        {isLoading && <LoadingEffect />}
+        <video
+          src={MainVideo}
+          loop
+          muted
+          autoPlay
+          onLoadedData={handleLoadedData}
+          style={{ display: isLoading ? "none" : "block" }}
+        />
       </VideoContainer>
 
       <div className="container">
