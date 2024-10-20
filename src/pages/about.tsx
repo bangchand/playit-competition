@@ -402,7 +402,7 @@ export function About() {
       title: "Kehidupan Awal",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-normal mb-8">
+          <p className="text-neutral-200  text-xs md:text-sm lg:text-base xl:text-lg font-base mb-8">
             Desa ini awalnya merupakan pemukiman kecil yang dihuni oleh
             masyarakat yang mengandalkan pertanian dan peternakan sebagai sumber
             kehidupan. Kegiatan agraris ini menjadi tulang punggung perekonomian
@@ -416,7 +416,7 @@ export function About() {
       title: "Pembentukan Desa",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-base mb-8">
             Desa Genggelang secara resmi dibentuk pada awal abad ke-20, sekitar
             tahun 1920-an, sebagai bagian dari kebijakan pemerintahan kolonial
             Belanda untuk mengatur administrasi di Lombok.
@@ -428,7 +428,7 @@ export function About() {
       title: "Transformasi Pasca-Kemerdekaan",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-base mb-8">
             Setelah kemerdekaan Indonesia, Desa Genggelang mengalami
             transformasi besar. Pada periode 1960-an hingga 1980-an, pembangunan
             infrastruktur, seperti jalan dan jembatan, mendukung pertumbuhan
@@ -441,7 +441,7 @@ export function About() {
       title: "Jejak Berdirinya",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-base mb-8">
             Berdirinya Desa Genggelang merupakan hasil perjuangan masyarakat
             lokal untuk memiliki identitas dan kedaulatan. Para sesepuh dan
             tokoh masyarakat berperan penting dalam mendorong pembentukan desa.
@@ -453,7 +453,7 @@ export function About() {
       title: "Perkembangan Terkini",
       content: (
         <div>
-          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm lg:text-base xl:text-lg font-base mb-8">
             Desa Genggelang telah mengalami perkembangan pesat dalam
             infrastruktur dan ekonomi, termasuk kemudahan akses ke pasar dan
             layanan publik. Transformasi ini berdampak positif pada pariwisata
@@ -477,9 +477,9 @@ export function About() {
               data-aos-duration="1200"
               data-aos-easing="ease"
               data-aos-delay="0"
-              className="text-white hidden lg:block text-[2rem] md:text-[3rem] md:px-0 font-bold font-poppins mb-3"
+              className="text-white hidden lg:block text-[2rem] md:text-[3rem] md:px-0 font-bold font-base mb-3"
             >
-              Profile Desa Genggelang
+              Profil Desa Genggelang
             </h1>
             <p
               data-aos="fade-right"
@@ -533,9 +533,9 @@ export function About() {
                     data-aos-duration="1200"
                     data-aos-easing="ease"
                     data-aos-delay="0"
-                    className="text-white block lg:hidden text-[2rem] md:text-[3rem] md:px-0 font-bold font-poppins mb-3"
+                    className="text-white block lg:hidden text-[1.6rem] md:text-[3rem] md:px-0 font-bold font-base mb-3"
                   >
-                    Profile Desa Genggelang
+                    Profil Desa Genggelang
                   </h1>
 
                   <p
