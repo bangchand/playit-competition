@@ -15,7 +15,7 @@ const Geografis: React.FC = () => {
       </div>
 
       <div className="relative z-0 w-full lg:w-full max-w-4xl md:mb-0 md:absolute lg:absolute md:left-[10%] md:top-[20%] lg:left-[3%] xl:left-0 lg:top-[25%]">
-      <h1 className="py-2 text-center relative mb-0 md:top-[66%] lg:left-[6%] lg:top-[66%] text-white/70 transition-all duration-300 hover:text-white italic text-[10px] md:text-sm">
+      <h1 className="py-2 lg:text-left lg:left-[12%] lg:top-14 text-center relative mb-0 md:top-[66%] text-white/70 transition-all duration-300 hover:text-white italic text-[10px] md:text-sm">
         Kabupaten Lombok Utara, Nusa Tenggara Barat
       </h1>
         <img
@@ -36,7 +36,7 @@ const Geografis: React.FC = () => {
      
 
 
-      <div className="bg-[#141414] backdrop-blur-md py-2 px-1 text-white/80 rounded-xl shadow-lg md:border border-white/30 w-full md:w-auto md:max-w-md md:mb-0 md:absolute md:left-[63%] md:top-[27%]">
+      <div className="bg-[#141414] mt-2 backdrop-blur-md py-2 px-1 text-white/80 rounded-xl shadow-lg md:border border-white/30 w-full md:w-auto md:max-w-md md:mb-0 md:absolute md:left-[63%] md:top-[27%]">
         <p className="text-xs md:text-base px-2 mb-4">
           Sebelah Utara: Desa Genggelang berbatasan langsung dengan Laut Jawa,
           memberikan akses ke kawasan pantai. <br /><br />
