@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MainVideo from "/hero_video.mp4";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Genggelang from "/logogenggelang.png";
 import Ntb from "/logontb.svg";
 import Profile from "../Section/Profile";
+// import { motion } from "framer-motion";
 import UMKMGallery from "../Section/Umkm";
 import Geografis from "../Section/Geografis";
 import { Wisata } from "../Section/Wisata";
-import Wisata2 from "../Section/Wisata2";
 import Potensi from "../Section/Potensi";
 import { TextGenerateEffect } from "../components/Text";
 import Footer from "../components/Footer";
@@ -76,19 +76,23 @@ const RightLogo = styled(LogoContainer)`
   max-width: 50px;
 `;
 
+const LoadingEffect = () => {
+  return (
+    <div className="w-full h-screen text-white flex justify-center items-center z-0">
+      <div className="text-center">
+        <h1>Video Loading...</h1>
+        <div className="loading"></div>
+      </div>
+    </div>
+  );
+};
+
 const Home: React.FC = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const handleLoadedData = () => {
+    setIsLoading(false);
+  };
 
   return (
     <>
@@ -126,7 +130,15 @@ const Home: React.FC = () => {
             duration={2}
           />
         </div>
-        <video src={MainVideo} loop muted autoPlay />
+        {isLoading && <LoadingEffect />}
+        <video
+          src={MainVideo}
+          loop
+          muted
+          autoPlay
+          onLoadedData={handleLoadedData}
+          style={{ display: isLoading ? "none" : "block" }}
+        />
       </VideoContainer>
 
       <div className="container">
@@ -139,7 +151,7 @@ const Home: React.FC = () => {
           <UMKMGallery />
         </div>
         <Geografis />
-        {isMobile ? <Wisata2 /> : <Wisata />}
+        <Wisata />
       </div>
       <Footer />
     </>
